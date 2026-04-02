@@ -1,8 +1,88 @@
-
+/*
+Title: styles.css
+Author: Tango Hunter
+Date Created: 4/1/26
+Date Modified: 4/1/26
+Description: Style Sheet for the Twitch Website
+*/
 
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root{
+--bg-main:#0B0F0C;
+--bg-secondary:#121A14;
+--accent-main:#00C853;
+--accent-secondary:#64DD17;
+--text-main:#E6F4EA;
+--text-secondary:#9FB8A7;
+--border:#1f5f3a;
+}
+
+[data-theme="light"]{
+--bg-main:#F4F7F5;
+--bg-secondary:#E1E8E4;
+--accent-main:#2E7D32;
+--accent-secondary:#66BB6A;
+--text-main:#1B2A1F;
+--text-secondary:#4C5F52;
+--border:#c7d3cc;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  max-width: 1600px;
+  margin: auto;
+  text-align: center;
+  font-family: Consolas, monospace;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.terminal {
+  background: var(--bg-main);
+  border-radius: .5rem;
+  box-shadow: 0 .6rem 1.6rem rgba(0, 0, 0, .4);
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.terminal-header {
+  background: var(--bg-secondary);
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.dot {
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+  margin-left: .7rem;
+  color: #9fb8a7;
+  font-size: .8rem;
+}
+
+.terminal-body {
+  padding: 1rem;
+  color: #00ff9c;
+  min-height: 120px;
+  white-space: pre-line;
+  text-align: left;
 }
