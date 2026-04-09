@@ -2,7 +2,7 @@
 Name: index.html
 Author: Tango Hunter
 Date Created: 4/1/26
-Date Modified: 4/1/26
+Date Modified: 4/8/26
 Description: Landing Page for the Twitch Streamer Tango Hunter
 -->
 
@@ -23,18 +23,23 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
                                                                     <!-- HEADER -->
     <header>
       <a id="top"></a>
-      <button id="mobile-menu"></button>
-      <button id="theme-toggle"></button>
-      <img src="images/th-banner.png" class="banner-img" alt="Tango Hunter's Banner image. Includes a woodland forest theme with military dog tags and a compound bow firing an arrow." />
+      <label class="mobile-toggle">
+        <input type="checkbox" id="mobileToggle">
+        <span class="toggle-menu"></span>
+      </label>
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <h1>Tango Hunter</h1>
     </header>
 
                                                                     <!-- NAVIGATION -->
     <nav>
       <a href="index.html">Home</a>
-      <a href="about">About</a>
-      <a href="schdule">Schedule</a>
-      <a href="socials">Socials</a>
-      <a href="commands">Commands</a>
+      <a href="#about">About</a>
+      <a href="#socials">Socials</a>
+      <a href="#commands">Commands</a>
       <a href="pages/tech.html">Tech</a>
     </nav>
 
@@ -43,7 +48,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
 
       <div id="live-banner"></div>
 
-      <div class="flex">
+      <div class="grid">
 
         <div class="terminal">
           <div class="terminal-header">
@@ -53,7 +58,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
             <span class="terminal-title">Terminal:~</span>
           </div>
           <div class="terminal-body">
-            <span id="terminal-text">Tango Hunter is the best mid streamer out there.</span>
+            <span id="terminal-text"></span>
             <span class="cursor"></span>
           </div>
         </div>
@@ -63,15 +68,60 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
             <span class="red dot"></span>
             <span class="yellow dot"></span>
             <span class="green dot"></span>
-            <span class="terminal-title">Terminal:~</span>
+            <span class="terminal-title">Twitch Player</span>
           </div>
           <div class="terminal-body">
-            <span id="terminal-text">Tango Hunter is the best mid streamer out there.</span>
-            <span class="cursor"></span>
+            <span id="twitch-player"></span>
           </div>
         </div>
         
       </div>
+
+      <section id="about">
+        <h2>About</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>About Me</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="card">
+            <h3>Schedule</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="socials">
+        <h2>Socials</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Discord</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="card">
+            <h3>Youtube</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="commands">
+        <h2>Commands</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Viewer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="card">
+            <h3>Spotify</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="card">
+            <h3>Tango Sounds</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
 
     </main>
 
@@ -79,9 +129,11 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
     <footer>
       <a href="#top">Back to Top</a>
       <img src="images/dogtag-hr.png" class="footer-img" alt="A horizontal Rule that displays dog tags on a chain." />
+      <p>© 2026 Tango Hunter | Twitch Streamer</p>
     </footer>
 
     <script src="scripts/script.js" async defer></script>
+    <script src="scripts/live-alert.js" async defer></script>
   </body>
 
 </html>
