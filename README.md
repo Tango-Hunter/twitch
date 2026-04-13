@@ -3,9 +3,14 @@
 ## Contributors
 * Tango Hunter
 ---
+### Description
+This repository hosts the static website for Twitch streamer Tango_Hunter, featuring stream info, schedules, and curated content.
+---
 ### Additional Information
 * This repository is hosted on github pages and is redirected to our custom domain: [TangoHunter.com](TangoHunter.com).
 * Tutorials and streaming information will be updated as we progress through this project.
+* Technologies used: VS Code, Github
+* Languages used: HTML, CSS, JS (Tech Updates will include JSON in the future)
 ---
 ### Project Updates:
 * Week 1 Update (April 1, 2026): Created repository and organized our folder/content structure. Also created the basic HTML layout for the homepage and linked our CSS and JS files within the document.
