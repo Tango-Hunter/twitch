@@ -43,7 +43,7 @@ body {
 }
 
 header {
-  background-image: url("/twitch/images/header-banner.png");
+  background-image: url("../images/header-banner.png");
   position: relative;
   width: 100%;
   background-size: contain;
@@ -182,8 +182,20 @@ iframe {
 
 
 footer {
+  position: relative;
   margin-bottom: 1rem;
-  img {
-    width: 100%;
-  }
+  background-image: url(../images/dogtag-hr.png);
+  width: 100%;
+  aspect-ratio: 7 / 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer p {
+  position: absolute;
+  bottom: -.5rem;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%)
 }
