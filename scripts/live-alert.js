@@ -8,7 +8,7 @@
 const username = "Tango_Hunter";
 
 const twitchPlayer = document.getElementById("twitch-player");
-twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${username}&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no" width="100%"></iframe>`;
+twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${username}&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>`;
 
 const terminalText = document.getElementById("terminal-text");
 
@@ -91,41 +91,43 @@ function typeLine(lines) {
 // Main function to display in the terminal window
 async function main() {
   terminalText.innerText = "";
-    const currentUptime = await getUptime();
+  lineIndex = 0;
+  charIndex = 0;
+  const currentUptime = await getUptime();
 
-    if (currentUptime.toLowerCase().includes("offline")) { // Offline
-      const currentGame = await getGame();
-      const offline = [
-        `${username} is offline`,
-        `Previous stream content: ${currentGame}`,
-        "Please follow on Twitch to receive live alerts"
-      ];
-      typeLine(offline);
+  if (currentUptime.toLowerCase().includes("offline")) { // Offline
+    const currentGame = await getGame();
+    const offline = [
+      `${username} is offline`,
+      `Previous stream content: ${currentGame}`,
+      "Please follow on Twitch to receive live alerts"
+    ];
+    typeLine(offline);
 
-    } else if (currentUptime == "Error") { //Error
-      const errorMessage = [
-        "Error...",
-        "Unable to retrieve stream status",
-        "Please check connection"
-      ];
-      typeLine(errorMessage);
+  } else if (currentUptime == "Error") { //Error
+    const errorMessage = [
+      "Error...",
+      "Unable to retrieve stream status",
+      "Please check connection"
+    ];
+    typeLine(errorMessage);
 
-    } else {  // Online
-      const currentGame = await getGame();
-      const currentViewers = await getViewers();
-      const currentTitle = await getTitle();
-      const online = [
-        `Initializing ${username} stream environment...`,
-        "Loading modules: chill, fps, horror, fantasy...",
-        `Currently streaming: ${currentGame}`,
-        `Current viewers: ${currentViewers}`,
-        `Current uptime: ${currentUptime}`,
-        `Stream Title: ${currentTitle}`,
-        "Status: Ready. Press play and let the chaos begin!"
-      ];
-      typeLine(online);
-        
-    }
+  } else {  // Online
+    const currentGame = await getGame();
+    const currentViewers = await getViewers();
+    const currentTitle = await getTitle();
+    const online = [
+      `Initializing ${username} stream environment...`,
+      "Loading modules: chill, fps, horror, fantasy...",
+      `Currently streaming: ${currentGame}`,
+      `Current viewers: ${currentViewers}`,
+      `Current uptime: ${currentUptime}`,
+      `Stream Title: ${currentTitle}`,
+      "Status: Ready. Press play and let the chaos begin!"
+    ];
+    typeLine(online);
+  }
 }
 
 main();
+setInterval(main,60000);
