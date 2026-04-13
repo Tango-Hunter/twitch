@@ -8,7 +8,7 @@
 const username = "Tango_Hunter";
 
 const twitchPlayer = document.getElementById("twitch-player");
-twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${username}&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>`;
+twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${username}&parent=tangohunter.com" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>`;
 
 const terminalText = document.getElementById("terminal-text");
 
