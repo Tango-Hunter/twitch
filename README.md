@@ -4,7 +4,7 @@
 * Tango Hunter
 ---
 ### Description
-*This repository hosts the static website for Twitch streamer Tango_Hunter, featuring stream info, schedules, and curated content and was built live on stream.
+* This repository hosts the static website for Twitch streamer Tango_Hunter, featuring stream info, schedules, and curated content and was built live on stream.
 ---
 ### Additional Information
 * This repository is hosted on github pages and is redirected to our custom domain: [TangoHunter.com](TangoHunter.com).
