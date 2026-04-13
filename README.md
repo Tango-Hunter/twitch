@@ -4,7 +4,7 @@
 * Tango Hunter
 ---
 ### Additional Information
-* This repository is hosted on github pages and is hosted in our custom domain: [TangoHunter.com](TangoHunter.com).
+* This repository is hosted on github pages and is redirected to our custom domain: [TangoHunter.com](TangoHunter.com).
 * Tutorials and streaming information will be updated as we progress through this project.
 ---
 ### Project Updates:
