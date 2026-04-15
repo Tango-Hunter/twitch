@@ -30,7 +30,7 @@ Description: Style Sheet for the Twitch Website
   --accent-secondary:#66BB6A;
   --text-main:#1B2A1F;
   --text-secondary:#4C5F52;
-  --border:#c7d3cc;
+  --border:#1f5f3a;
 }
 
 body {
@@ -183,7 +183,7 @@ iframe {
 
 footer {
   position: relative;
-  margin: 2rem;
+  margin: 2rem 0;
   background-image: url(../images/dogtag-hr.png);
   width: 100%;
   aspect-ratio: 7 / 1;
@@ -192,10 +192,10 @@ footer {
   background-repeat: no-repeat;
 }
 
-footer p {
+.copywrite {
   position: absolute;
   bottom: -1rem;
-  margin: auto;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%)
 }
