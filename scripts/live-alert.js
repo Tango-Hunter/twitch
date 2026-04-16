@@ -129,5 +129,5 @@ async function main() {
   }
 }
 
-//main();
-//setInterval(main,60000);
+main();
+setInterval(main,60000);
