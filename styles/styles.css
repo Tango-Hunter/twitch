@@ -55,6 +55,38 @@ header {
   overflow: hidden;
 }
 
+.live-banner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  background: red;
+  box-shadow: 0 0 8px red;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%{box-shadow:0 0 5px red}
+  50%{box-shadow:0 0 18px red}
+  100%{box-shadow:0 0 5px red}
+}
+
+.banner-active {
+  display: inline-block;
+}
+
+.live-status a {
+  color: inherit;
+}
+
+.banner-active ~ header {
+  top: 2.2rem;
+}
+
 .theme-toggle{
   position: absolute;
   top: 20px;
@@ -347,7 +379,14 @@ footer {
 @media (max-width: 950px) {
 
   .mobile-toggle {
-    display: flex
+    display: flex;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  .theme-toggle {
+    top: .5rem;
+    right: .5rem;
   }
 
   .main-nav {
@@ -382,5 +421,14 @@ footer {
 
   .cards {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-active ~ header {
+    top: 3.2rem;
+  }
+  .grid {
+    margin-top: 2.2rem;
   }
 }

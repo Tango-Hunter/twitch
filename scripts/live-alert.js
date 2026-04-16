@@ -12,6 +12,10 @@ twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${usern
 
 const terminalText = document.getElementById("terminal-text");
 
+const liveStatus = document.getElementById("liveStatus");
+const liveBanner = document.getElementById("liveBanner");
+liveStatus.innerHTML = `LIVE NOW — ${username} is streaming! <a href="https://www.twitch.tv/${username}" target="_blank">Watch Now</a>`;
+
 // Fetches and formats uptime or errors if not offline
 async function getUptime() {
     try {
@@ -96,6 +100,7 @@ async function main() {
   const currentUptime = await getUptime();
 
   if (currentUptime.toLowerCase().includes("offline")) { // Offline
+    liveBanner.classList.remove("banner-active");
     const currentGame = await getGame();
     const offline = [
       `${username} is offline`,
@@ -113,6 +118,7 @@ async function main() {
     typeLine(errorMessage);
 
   } else {  // Online
+    liveBanner.classList.add("banner-active");
     const currentGame = await getGame();
     const currentViewers = await getViewers();
     const currentTitle = await getTitle();
