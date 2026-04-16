@@ -2,7 +2,7 @@
 Name: index.html
 Author: Tango Hunter
 Date Created: 4/1/26
-Date Modified: 4/8/26
+Date Modified: 4/15/26
 Description: Landing Page for the Twitch Streamer Tango Hunter
 -->
 
@@ -23,10 +23,11 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
                                                                     <!-- HEADER -->
     <header>
       <a id="top"></a>
-      <label class="mobile-toggle">
-        <input type="checkbox" id="mobileToggle">
-        <span class="toggle-menu"></span>
-      </label>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <label class="theme-toggle">
         <input type="checkbox" id="themeToggle">
         <span class="toggle-slider"></span>
@@ -35,13 +36,17 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
     </header>
 
                                                                               <!-- NAVIGATION -->
-    <nav class="desktop-nav">
-      <a href="index.html" class="neon-btn">Home</a>
-      <a href="#about" class="neon-btn">About</a>
-      <a href="#socials" class="neon-btn">Socials</a>
-      <a href="#commands" class="neon-btn">Commands</a>
-      <a href="pages/tech.html" class="neon-btn">Tech</a>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="neon-btn">Home</a></li>
+        <li><a href="#about" class="neon-btn">About</a></li>
+        <li><a href="#socials" class="neon-btn">Socials</a></li>
+        <li><a href="#commands" class="neon-btn">Commands</a></li>
+        <li><a href="pages/tech.html" class="neon-btn">Tech</a></li>
+      </ul>
     </nav>
+
+    <div class="overlay" id="overlay"></div>
 
                                                                     <!-- MAIN CONTENT -->
     <main>
@@ -80,11 +85,15 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <div class="cards">
           <div class="card">
             <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>I’m Tango Hunter—an older, chill dude who believes gaming should be fun, not stressful. I’m a dad first, doing my best to balance real life with some well-earned time in front of the screen. Whether I’m exploring new worlds or revisiting old favorites, I bring a laid-back vibe, a bit of sarcasm, and plenty of laughs. I’m not here to be the best—I’m here to show up, have a good time, and enjoy the ride (even when things go sideways).</p>
           </div>
           <div class="card">
             <h3>Schedule</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>I stream weeknights from 9 PM to midnight EST, keeping things relaxed and fun. On the first Wednesday of each month, I switch gears for Tech Night—stepping away from games to dive into the digital world with tutorials and hands-on projects. Whether you’re here to learn something new or just hang out, there’s always something going on. Just a heads up: the schedule can change without notice for family time or a little personal decompression.</p>
+          </div>
+          <div class="card">
+            <h3>Games</h3>
+            <p>My regular streams are all about playing whatever feels right in the moment. Some nights we’re kicking back with cozy games like Palia or Minecraft, other nights we’re diving into something spooky like Phasmophobia. I mix in FPS games, RPG adventures, and the occasional wildcard just to keep things interesting. No matter what we’re playing, the goal is always the same—relax, have fun, and enjoy the ride.</p>
           </div>
         </div>
       </section>
@@ -94,11 +103,15 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <div class="cards">
           <div class="card">
             <h3>Discord</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>If you want the most up-to-date info, my Discord is the place to be. That’s where I post schedule updates, announcements, and anything happening behind the scenes. It’s also a great spot to hang out with the community and keep the conversation going off stream. Life happens and plans change, so if you ever need the latest details, Discord’s got you covered.</p>
           </div>
           <div class="card">
             <h3>Youtube</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Missed a Tech Night or want to go back through something at your own pace? My YouTube is where all those streams live after the fact. You’ll find tutorials, walkthroughs, and deep dives into whatever we explored. It’s all there whenever you need it—no live schedule required.</p>
+          </div>
+          <div class="card">
+            <h3>Github</h3>
+            <p>Looking for the code from the streams? My GitHub is where I keep all the repositories. From Tech Night projects to random experiments, everything gets posted there so you can follow along, tinker, or dig into how things work. It’s all organized and ready whenever you are.</p>
           </div>
         </div>
       </section>
@@ -108,15 +121,15 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <div class="cards">
           <div class="card">
             <h3>Viewer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>!8ball, !accountage, !arrows, !clip, !cracked, !dadjoke, !discord, !flipcoin, !followage, !fortune, !hug, !language, !lurk, !note, !punch, !quote, !randomfact, !readNote, !readQuote, !russianroulette, !sacrifice, !translate, !watchstreak</p>
           </div>
           <div class="card">
             <h3>Spotify</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>!lastSong, !link, !prev, !previous, !queue, !request, !restart, !restartSpot, !song, !songLink, !songRequest, !spotLink, !spotPrev, !spotQueue, !sr</p>
           </div>
           <div class="card">
             <h3>Tango Sounds</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>!enderman, !hoe, !uwu</p>
           </div>
         </div>
       </section>
@@ -125,7 +138,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
 
                                                                     <!-- FOOTER -->
     <footer>
-      <a href="#top" class="neon-btn">Back to Top</a>
+      <a href="#top" class="neon-btn">To Top</a>
       <span class="copywrite">© 2026 Tango Hunter | Twitch Streamer</span>
     </footer>
 

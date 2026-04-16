@@ -2,7 +2,7 @@
 Title: styles.css
 Author: Tango Hunter
 Date Created: 4/1/26
-Date Modified: 4/8/26
+Date Modified: 4/15/26
 Description: Style Sheet for the Twitch Website
 */
 
@@ -109,6 +109,119 @@ h1 {
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.75);
 }
 
+.mobile-toggle {
+position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  width: 35px;
+  height: 27px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-main);
+  cursor: pointer;
+  z-index: 1001;
+  border: 1px solid var(--text-main);
+  border-radius: 10%;
+  padding: 5px;
+}
+
+.mobile-toggle span{
+  display: block;
+  height: 3px;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: .3s ease;
+}
+
+.mobile-toggle.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 999;
+}
+
+.overlay.show {
+  opacity:1;
+  visibility: visible;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.neon-btn {
+  top: -1rem;
+  margin: 0px 30px;
+  background-color: var(--bg-main);
+  color: var(--accent-main);
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: var(--accent-main) 4px solid;
+  border-radius: 10px;
+  padding: 5px;
+  text-shadow: 1px 1px 10px var(--accent-main);
+  width: 125px;
+  text-align: center;
+  box-shadow: 0 0 10px 5px var(--accent-main), inset 0 0 10px 5px var(--accent-main);
+  position: relative;
+}
+
+.neon-btn::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: var(--accent-main);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(20px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(20px);
+  opacity: 0.5;
+}
+
+.neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  box-shadow: 0 0 20px 10px var(--accent-main);
+  opacity: 0.5;
+}
+
+.neon-btn:hover,
+.neon-btn:focus {
+  background: var(--accent-main);
+  color: #000;
+  text-shadow: none;
+  outline: none;
+}
+
+.neon-btn:hover::before,
+.neon-btn:hover::after,
+.neon-btn:focus::before,
+.neon-btn:focus::after {
+  opacity: 1;
+  outline: none;
+}
+
 .flex {
   display: flex;
   gap: 1rem;
@@ -127,6 +240,7 @@ h1 {
   box-shadow: 0 .6rem 1.6rem rgba(0, 0, 0, .4);
   overflow: hidden;
   margin: 1rem;
+  min-height: 300px;
 }
 
 .terminal-header {
@@ -180,6 +294,36 @@ iframe {
   margin: auto;
 }
 
+h2, h3 {
+  text-align: left;
+}
+
+section {
+  padding: 2rem;
+}
+
+.cards {
+  display: flex;
+  margin-top: .5rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--bg-secondary);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  color: var(--accent-secondary)
+}
+
+.card:hover {
+  box-shadow: 0 0 12px var(--accent-main);
+  transform: translateY(-3px);
+}
 
 footer {
   position: relative;
@@ -198,4 +342,45 @@ footer {
   width: 100%;
   left: 50%;
   transform: translateX(-50%)
+}
+
+@media (max-width: 950px) {
+
+  .mobile-toggle {
+    display: flex
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    padding: 80px 20px;
+    background: var(--bg-main);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .neon-btn::before {
+    content: none;
+  }
+
+  .main-nav.open {
+    left: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
 }

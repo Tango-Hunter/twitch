@@ -2,7 +2,7 @@
  * Title: live-alert.js
  * Author: Tango Hunter
  * Date Created: 4/8/26
- * Date Modified: 4/8/26
+ * Date Modified: 4/15/26
  */
 
 const username = "Tango_Hunter";
@@ -129,5 +129,5 @@ async function main() {
   }
 }
 
-main();
-setInterval(main,60000);
+//main();
+//setInterval(main,60000);
