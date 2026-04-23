@@ -38,9 +38,9 @@ function addTech(name = "", link = "") {
   row.className = "tech-row";
 
   row.innerHTML = `
-    <input value="${name}">
-    <input value="${link}">
-    <button type="button" class="danger">X</button>
+    <input value="${name}" placeholder="Name" id="tech-name">
+    <input value="${link}" placeholder="Link" id="tech-link">
+    <button type="button" class="danger" id="tech-del">X</button>
   `;
 
   row.querySelector("button").onclick = () => {

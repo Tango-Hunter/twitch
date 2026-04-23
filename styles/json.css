@@ -59,6 +59,7 @@ input, textarea {
 .tech-row {
   display: flex;
   gap: 10px;
+  position: relative;
 }
 
 button {
@@ -199,4 +200,24 @@ button:disabled {
 .modal-actions {
   display: flex;
   justify-content: space-between;
+}
+
+/* TECH STACK OVERFLOW CORRECTION */
+@media (max-width: 550px) {
+  .tech-row {
+  flex-direction: column;
+  z-index: 0;
+  }
+  #tech-del::before {
+    content: "X Remove Tech";
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 2.5%;
+    height: 25px;
+    Width: 95%;
+    color:#fff;
+    background: #e53935;
+  }
 }
