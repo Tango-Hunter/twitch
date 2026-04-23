@@ -51,7 +51,7 @@ window.techData = [
     "title": "Website Build Part 1",
     "video": "OV_wRxhWegM",
     "date": "2026-04-01",
-    "description": "Part 1 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Part 1 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
     "tech": [
       {
         "name": "VS Code",
@@ -67,7 +67,7 @@ window.techData = [
     "title": "Website Build Part 2",
     "video": "dwVPQHqyf38",
     "date": "2026-04-08",
-    "description": "Part 1 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Part 2 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
     "tech": [
       {
         "name": "VS Code",
@@ -83,7 +83,7 @@ window.techData = [
     "title": "Website Build Part 3",
     "video": "qm1W2B7p4xM",
     "date": "2026-04-15",
-    "description": "Part 3 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Part 3 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
     "tech": [
       {
         "name": "VS Code",
