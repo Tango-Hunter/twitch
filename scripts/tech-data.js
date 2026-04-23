@@ -1,0 +1,38 @@
+/**
+ * Title: tech-data.js
+ * Author: Tango Hunter
+ * Date Created: 4/20/26
+ * Date Modified: 4/20/26
+ * Description: JSON data to import into the tech grid/modal
+ */
+
+window.techData = [
+  {
+    "title": "Streamer.bot Tutorial",
+    "video": "1yLIqGDmxyw",
+    "date": "2026-01-07",
+    "description": "Tango Hunter's first tech stream where he showcased streamer.bot. It is a program that runs locally on your PC to control and automate much of the stream. We did a deep dive starting with the basics and ultimately making some advanced actions.",
+    "tech": [
+      {
+        "name": "Streamer.bot",
+        "link": "https://streamer.bot/"
+      },
+      {
+        "name": "OBS",
+        "link": "https://obsproject.com/"
+      }
+    ]
+  },
+  {
+    "title": "3D Modeling Part 1",
+    "video": "9o4VtkomJBU",
+    "date": "2026-02-04",
+    "description": "This is part 1 of a 2 part series where we design a riser station for a Bambu Lab A-1 3D printer. We made everything in Fusion 360.",
+    "tech": [
+      {
+        "name": "Fusion360",
+        "link": "https://www.autodesk.com/products/fusion-360/"
+      }
+    ]
+  }
+];

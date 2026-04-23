@@ -1,0 +1,85 @@
+<!--
+Name: json-converter.html
+Author: Tango Hunter
+Date Created: 4/20/26
+Date Modified: 4/20/26
+Description: JSON web-app for Tango Hunter to store info from his tech streams on a local json file. Allows for all CRUD operations.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tango Hunter | JSON Editor</title>
+    <link rel="stylesheet" href="../styles/json.css">
+  </head>
+
+  <body>
+
+    <div id="top"></div>
+
+    <div class="container">
+
+    <nav class="top-nav">
+      <a href="tech.html">← Go back to Tech</a>
+      <a href="#filePreview">Go to File Preview ↓</a>
+    </nav>
+
+    <h1>JSON Converter</h1>
+    <div id="editBadge" class="edit-badge hidden">Editing Entry</div>
+
+    <!-- JSON Form -->
+    <form id="jsonForm">
+      <input id="title" placeholder="Title">
+      <input id="video" placeholder="Video Embed">
+      <input type="date" id="date">
+      <textarea id="description" placeholder="Description"></textarea>
+
+      <h3>Tech Stack</h3>
+      <div id="techContainer"></div>
+
+      <button type="button" onclick="addTech()">+ Add Tech</button>
+    </form>
+
+    <!-- JSON Preview -->
+    <h3>JSON Preview</h3>
+    <pre id="output">{}</pre>
+
+    <div class="file-controls">
+      <button onclick="openFile()">Open JSON File</button>
+      <button id="saveBtn" onclick="appendEntry()">Save Entry</button>
+      <button onclick="deleteEntry()" class="danger">Delete Entry</button>
+      <button onclick="clearSelection()" class="secondary">Clear Form</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="filePreview" class="preview-section">
+      <a href="#top" class="scroll-btn">↑ Back to Top</a>
+
+      <!-- File Contents -->
+      <h2>Click an Entry to Edit</h2>
+      <div id="fileOutput"></div>
+
+      <a href="#top" class="scroll-btn">↑ Back to Top</a>
+    </div>
+
+    </div>
+
+    <!-- Confirm Modal -->
+    <div id="confirmModal" class="modal">
+      <div class="modal-content">
+        <h3>Confirm Action</h3>
+        <pre id="confirmJSON"></pre>
+        <div class="modal-actions">
+          <button onclick="confirmAction()">Confirm</button>
+          <button class="danger" onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/json.js"></script>
+  </body>
+</html>

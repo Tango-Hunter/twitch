@@ -1,12 +1,12 @@
 /**
- * Title: script.js
+ * Title: main.js
  * Author: Tango Hunter
  * Date Created: 4/1/26
- * Date Modified: 4/15/26
+ * Date Modified: 4/20/26
  * Description: Theme and Mobile Script
  */
 
-// Theme Toggle
+// ------------ Theme Toggle ------------
 const toggle = document.getElementById("themeToggle");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -28,7 +28,7 @@ const current = document.documentElement.getAttribute("data-theme");
 setTheme(current === "dark" ? "light" : "dark");
 });
 
-// Mobile Toggle
+// ----------- Mobile Toggle ------------
 const mobileToggle = document.getElementById("mobileToggle");
 const mainNav = document.getElementById("mainNav");
 const overlay = document.getElementById("overlay");
@@ -50,3 +50,5 @@ function closeMenu(){
   mainNav.classList.remove("open");
   overlay.classList.remove("show");
 }
+
+// ---------- ScanLine Overlay ----------

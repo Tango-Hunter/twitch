@@ -1,8 +1,8 @@
 /*
-Title: styles.css
+Title: main.css
 Author: Tango Hunter
 Date Created: 4/1/26
-Date Modified: 4/15/26
+Date Modified: 4/20/26
 Description: Style Sheet for the Twitch Website
 */
 
@@ -42,8 +42,9 @@ body {
   font-family: Consolas, monospace;
 }
 
+/* HEADER */
 header {
-  background-image: url("../images/header-banner.png");
+  background-image: url("../assets/images/header-banner.png");
   position: relative;
   width: 100%;
   background-size: contain;
@@ -55,6 +56,7 @@ header {
   overflow: hidden;
 }
 
+/* LIVE BANNER */
 .live-banner {
   display: none;
   position: fixed;
@@ -87,6 +89,7 @@ header {
   top: 2.2rem;
 }
 
+/* THEME TOGGLE */
 .theme-toggle{
   position: absolute;
   top: 20px;
@@ -141,6 +144,7 @@ h1 {
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.75);
 }
 
+/* NAVIGATIONAL ELEMENTS */
 .mobile-toggle {
 position: absolute;
   top: 1.4rem;
@@ -254,17 +258,22 @@ position: absolute;
   outline: none;
 }
 
+/* MAIN CONTENT */
+main {
+  margin: 1rem;
+}
+
 .flex {
   display: flex;
   gap: 1rem;
 }
 
-.grid {
+.hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 1rem;
 }
 
+/* TERMINALS */
 .terminal {
   background: #0B0F0C;
   border: 1px solid var(--border);
@@ -330,8 +339,9 @@ h2, h3 {
   text-align: left;
 }
 
+/* DIVIDED CONTENT */
 section {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .cards {
@@ -346,6 +356,7 @@ section {
   padding: 1.2rem;
   border-radius: 10px;
   border: 1px solid var(--border);
+  transition: 0.2s ease;
 }
 
 .card h3 {
@@ -357,10 +368,11 @@ section {
   transform: translateY(-3px);
 }
 
+/* FOOTER */
 footer {
   position: relative;
   margin: 2rem 0;
-  background-image: url(../images/dogtag-hr.png);
+  background-image: url(../assets/images/dogtag-hr.png);
   width: 100%;
   aspect-ratio: 7 / 1;
   background-size: contain;
@@ -376,6 +388,7 @@ footer {
   transform: translateX(-50%)
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 950px) {
 
   .mobile-toggle {
@@ -424,11 +437,12 @@ footer {
   }
 }
 
+/* LIVE BANNER OVERFLOW CORRECTION */
 @media (max-width: 480px) {
   .banner-active ~ header {
     top: 3.2rem;
   }
-  .grid {
+  .hero {
     margin-top: 2.2rem;
   }
 }

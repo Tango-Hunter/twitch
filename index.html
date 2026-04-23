@@ -2,7 +2,7 @@
 Name: index.html
 Author: Tango Hunter
 Date Created: 4/1/26
-Date Modified: 4/15/26
+Date Modified: 4/20/26
 Description: Landing Page for the Twitch Streamer Tango Hunter
 -->
 
@@ -15,19 +15,19 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-theme" content="dark light" />
     <title>Tango Hunter</title>
-    <link href="styles/styles.css" rel="stylesheet"/>
+    <link href="styles/main.css" rel="stylesheet"/>
   </head>
 
   <body>
 
+    <!-- LIVE BANNER -->
     <div id="liveBanner" class="live-banner">
       <span class="live-dot" id="livedot">🔴</span><span class="live-status" id="liveStatus"></span>
     </div>
-                                                                    <!-- HEADER -->
+
+    <!-- HEADER -->
     <header>
       <a id="top"></a>
-
-
 
       <button class="mobile-toggle" id="mobileToggle">
         <span></span>
@@ -39,11 +39,12 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <input type="checkbox" id="themeToggle">
         <span class="toggle-slider"></span>
       </label>
+      
       <h1>Tango Hunter</h1>
 
     </header>
 
-                                                                              <!-- NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav class="main-nav" id="mainNav">
       <ul class="nav-list">
         <li><a href="index.html" class="neon-btn">Home</a></li>
@@ -56,11 +57,13 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
 
     <div class="overlay" id="overlay"></div>
 
-                                                                   <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
     <main>
 
-      <div class="grid">
+      <!-- HERO SECTION -->
+      <div class="hero">
 
+        <!-- INFORMATIONAL TERMINAL -->
         <div class="terminal">
           <div class="terminal-header">
             <span class="red dot"></span>
@@ -73,6 +76,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
           </div>
         </div>
 
+        <!-- TWITCH VIDEO PLAYER -->
         <div class="terminal">
           <div class="terminal-header">
             <span class="red dot"></span>
@@ -86,6 +90,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         
       </div>
 
+      <!-- ABOUT -->
       <section id="about">
         <h2>About</h2>
         <div class="cards">
@@ -104,6 +109,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         </div>
       </section>
 
+      <!-- SOCIALS -->
       <section id="socials">
         <h2>Socials</h2>
         <div class="cards">
@@ -122,6 +128,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         </div>
       </section>
 
+      <!-- COMMANDS -->
       <section id="commands">
         <h2>Commands</h2>
         <div class="cards">
@@ -131,7 +138,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
           </div>
           <div class="card">
             <h3>Spotify</h3>
-            <p>!lastSong, !link, !prev, !previous, !queue, !request, !restart, !restartSpot, !song, !songLink, !songRequest, !spotLink, !spotPrev, !spotQueue, !sr</p>
+            <p>!lastSong, !link, !prev, !previous, !queue, !request, !restart, !song, !songLink, !songRequest, !sr</p>
           </div>
           <div class="card">
             <h3>Tango Sounds</h3>
@@ -142,13 +149,13 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
 
     </main>
 
-                                                                    <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <a href="#top" class="neon-btn">To Top</a>
       <span class="copywrite">© 2026 Tango Hunter | Twitch Streamer</span>
     </footer>
 
-    <script src="scripts/script.js" async defer></script>
+    <script src="scripts/main.js" async defer></script>
     <script src="scripts/live-alert.js" async defer></script>
   </body>
 

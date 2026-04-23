@@ -3,6 +3,7 @@
  * Author: Tango Hunter
  * Date Created: 4/8/26
  * Date Modified: 4/15/26
+ * Description: JS for the Live now Banner, the Info Terminal, and the Twitch video player.
  */
 
 const username = "Tango_Hunter";
@@ -12,6 +13,7 @@ twitchPlayer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${usern
 
 const terminalText = document.getElementById("terminal-text");
 
+// ------------ Live Banner -------------
 const liveStatus = document.getElementById("liveStatus");
 const liveBanner = document.getElementById("liveBanner");
 liveStatus.innerHTML = `LIVE NOW — ${username} is streaming! <a href="https://www.twitch.tv/${username}" target="_blank">Watch Now</a>`;
@@ -117,7 +119,7 @@ async function main() {
     ];
     typeLine(errorMessage);
 
-  } else {  // Online
+  } else {  // Online -------------------
     liveBanner.classList.add("banner-active");
     const currentGame = await getGame();
     const currentViewers = await getViewers();
@@ -135,5 +137,6 @@ async function main() {
   }
 }
 
+// ----------- Initialization -----------
 main();
 setInterval(main,60000);

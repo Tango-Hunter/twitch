@@ -10,17 +10,93 @@ Description: Call to action page for tech-based streams hosted on youtube.
 <html lang="en">
 
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tango Hunter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-theme" content="dark light" />
+    <title>Tango Hunter | Tech Streams</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tech.css">
   </head>
 
   <body>
+    <header>
+      <a id="top"></a>
 
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <h1>Tango Hunter</h1>
+
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="neon-btn">Home</a></li>
+        <li><a href="tech.html" class="neon-btn">Tech</a></li>
+        <li><a href="json-converter.html" class="neon-btn">JSON App</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+
+      <h2>Tech Streams</h2>
+
+      <div class="controls">
+
+        <select id="streamSelect">
+          <option value="">Jump to stream...</option>
+        </select>
+
+        <!-- FILTER -->
+        <div class="icon-dropdown">
+          <button class="icon-btn">⚙️</button>
+          <div class="dropdown-menu" id="filterMenu"></div>
+        </div>
+
+        <!-- SORT -->
+        <div class="icon-dropdown">
+          <button class="icon-btn">⇅</button>
+          <div class="dropdown-menu" id="sortMenu">
+            <div data-sort="newest">Newest First</div>
+            <div data-sort="oldest">Oldest First</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="grid" class="grid"></div>
+
+      <!-- MODAL -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">✖</span>
+          <div id="modalVideo"></div>
+          <div id="modalInfo"></div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="#top" class="neon-btn">To Top</a>
+      <span class="copywrite">© 2026 Tango Hunter | Twitch Streamer</span>
+    </footer>
     
-    <script src="../scripts/script.js" async defer></script>
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/tech-data.js" defer></script>
+    <script src="../scripts/tech.js" defer></script>
   </body>
   
 </html>
