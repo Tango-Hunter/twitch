@@ -40,6 +40,37 @@ body {
   margin: auto;
   text-align: center;
   font-family: Consolas, monospace;
+  background-image:
+    linear-gradient(rgba(0,255,100,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,100,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: var(--grid-x, 0px) var(--grid-y, 0px);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,120,0.03),
+    rgba(0,255,120,0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline{
+  from{transform:translateY(0)}
+  to{transform:translateY(10px)}
+}
+
+[data-theme="light"] body {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
 }
 
 /* HEADER */
@@ -263,14 +294,9 @@ main {
   margin: 1rem;
 }
 
-.flex {
-  display: flex;
-  gap: 1rem;
-}
-
 .hero {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 /* TERMINALS */
@@ -344,6 +370,10 @@ section {
   padding: 1rem;
 }
 
+.socials-link {
+  color: var(--accent-main);
+}
+
 .cards {
   display: flex;
   margin-top: .5rem;
@@ -378,6 +408,7 @@ footer {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 80px;
 }
 
 .copywrite {

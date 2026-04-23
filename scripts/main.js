@@ -37,6 +37,8 @@ mobileToggle.addEventListener("click",()=>{
   mobileToggle.classList.toggle("active");
   mainNav.classList.toggle("open");
   overlay.classList.toggle("show");
+  mobileToggle.ariaExpanded = "true";
+  overlay.setAttribute('aria-hidden', 'false');
 });
 
 overlay.addEventListener("click",closeMenu);
@@ -49,6 +51,17 @@ function closeMenu(){
   mobileToggle.classList.remove("active");
   mainNav.classList.remove("open");
   overlay.classList.remove("show");
+  mobileToggle.ariaExpanded = "false";
+overlay.setAttribute('aria-hidden', 'true');
 }
 
 // ---------- ScanLine Overlay ----------
+const strength = 10; // lower = more subtle
+
+document.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * strength;
+  const y = (e.clientY / window.innerHeight - 0.5) * strength;
+
+  document.body.style.setProperty("--grid-x", `${x}px`);
+  document.body.style.setProperty("--grid-y", `${y}px`);
+});

@@ -26,5 +26,65 @@
         "link": "https://www.autodesk.com/products/fusion-360/"
       }
     ]
+  },
+  {
+    "title": "3D Modeling Part 2",
+    "video": "ps9tfXObnTk",
+    "date": "2026-03-04",
+    "description": "This is part 2 of a 2 part series where we design a riser station for a Bambu Lab A-1 3D printer. We made everything in Fusion 360.",
+    "tech": [
+      {
+        "name": "Fusion360",
+        "link": "https://www.autodesk.com/products/fusion-360/"
+      }
+    ]
+  },
+  {
+    "title": "Website Build Part 1",
+    "video": "OV_wRxhWegM",
+    "date": "2026-04-01",
+    "description": "Part 1 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "tech": [
+      {
+        "name": "VS Code",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/"
+      }
+    ]
+  },
+  {
+    "title": "Website Build Part 2",
+    "video": "dwVPQHqyf38",
+    "date": "2026-04-08",
+    "description": "Part 2 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "tech": [
+      {
+        "name": "VS Code",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/"
+      }
+    ]
+  },
+  {
+    "title": "Website Build Part 3",
+    "video": "qm1W2B7p4xM",
+    "date": "2026-04-15",
+    "description": "Part 3 of 4 for building a custom website from streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "tech": [
+      {
+        "name": "VS Code",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/"
+      }
+    ]
   }
 ]

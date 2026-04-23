@@ -14,14 +14,15 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-theme" content="dark light" />
-    <title>Tango Hunter</title>
+    <meta name="description" content="Official website for Twitch streamer Tango Hunter. Live streams, schedule, and content.">
+    <title>Tango Hunter | Twitch Streamer</title>
     <link href="styles/main.css" rel="stylesheet"/>
   </head>
 
   <body>
 
     <!-- LIVE BANNER -->
-    <div id="liveBanner" class="live-banner">
+    <div id="liveBanner" class="live-banner" role="status" aria-live="polite">
       <span class="live-dot" id="livedot">🔴</span><span class="live-status" id="liveStatus"></span>
     </div>
 
@@ -29,7 +30,13 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
     <header>
       <a id="top"></a>
 
-      <button class="mobile-toggle" id="mobileToggle">
+      <button 
+        class="mobile-toggle" 
+        id="mobileToggle" 
+        aria-label="Toggle Navigation Menu" 
+        aria-controls="mainNav" 
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -39,13 +46,13 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <input type="checkbox" id="themeToggle">
         <span class="toggle-slider"></span>
       </label>
-      
+
       <h1>Tango Hunter</h1>
 
     </header>
 
     <!-- NAVIGATION -->
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
       <ul class="nav-list">
         <li><a href="index.html" class="neon-btn">Home</a></li>
         <li><a href="#about" class="neon-btn">About</a></li>
@@ -55,7 +62,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
       </ul>
     </nav>
 
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
 
     <!-- MAIN CONTENT -->
     <main>
@@ -64,7 +71,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
       <div class="hero">
 
         <!-- INFORMATIONAL TERMINAL -->
-        <div class="terminal">
+        <div class="terminal" aria-label="Informational Terminal Output">
           <div class="terminal-header">
             <span class="red dot"></span>
             <span class="yellow dot"></span>
@@ -77,14 +84,14 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         </div>
 
         <!-- TWITCH VIDEO PLAYER -->
-        <div class="terminal">
+        <div class="terminal" aria-label="Twitch Stream Player">
           <div class="terminal-header">
             <span class="red dot"></span>
             <span class="yellow dot"></span>
             <span class="green dot"></span>
             <span class="terminal-title">Twitch Player</span>
           </div>
-          <div class="terminal-body" id="twitch-player">
+          <div class="terminal-body" id="twitch-player" role="region" aria-label="Live Twitch Stream">
           </div>
         </div>
         
@@ -96,7 +103,7 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
         <div class="cards">
           <div class="card">
             <h3>About Me</h3>
-            <p>I’m Tango Hunter—an older, chill dude who believes gaming should be fun, not stressful. I’m a dad first, doing my best to balance real life with some well-earned time in front of the screen. Whether I’m exploring new worlds or revisiting old favorites, I bring a laid-back vibe, a bit of sarcasm, and plenty of laughs. I’m not here to be the best—I’m here to show up, have a good time, and enjoy the ride (even when things go sideways).</p>
+            <p>I’m Tango Hunter, an older, chill dude who believes gaming should be fun, not stressful. I’m a dad first, doing my best to balance real life with some well-earned time in front of the screen. Whether I’m exploring new worlds or revisiting old favorites, I bring a laid-back vibe, a bit of sarcasm, and plenty of laughs. I’m not here to be the best—I’m here to show up, have a good time, and enjoy the ride (even when things go sideways).</p>
           </div>
           <div class="card">
             <h3>Schedule</h3>
@@ -116,14 +123,17 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
           <div class="card">
             <h3>Discord</h3>
             <p>If you want the most up-to-date info, my Discord is the place to be. That’s where I post schedule updates, announcements, and anything happening behind the scenes. It’s also a great spot to hang out with the community and keep the conversation going off stream. Life happens and plans change, so if you ever need the latest details, Discord’s got you covered.</p>
+            <a href="https://discord.gg/75zY9KYr7r" target="_blank" class="socials-link">Join the Discord</a>
           </div>
           <div class="card">
             <h3>Youtube</h3>
             <p>Missed a Tech Night or want to go back through something at your own pace? My YouTube is where all those streams live after the fact. You’ll find tutorials, walkthroughs, and deep dives into whatever we explored. It’s all there whenever you need it—no live schedule required.</p>
+            <a href="https://www.youtube.com/@tango_hunter" target="_blank" class="socials-link">Visit the YouTube</a>
           </div>
           <div class="card">
             <h3>Github</h3>
             <p>Looking for the code from the streams? My GitHub is where I keep all the repositories. From Tech Night projects to random experiments, everything gets posted there so you can follow along, tinker, or dig into how things work. It’s all organized and ready whenever you are.</p>
+            <a href="https://github.com/tango-hunter" target="_blank" class="socials-link">Checkout the GitHub</a>
           </div>
         </div>
       </section>
@@ -155,8 +165,8 @@ Description: Landing Page for the Twitch Streamer Tango Hunter
       <span class="copywrite">© 2026 Tango Hunter | Twitch Streamer</span>
     </footer>
 
-    <script src="scripts/main.js" async defer></script>
-    <script src="scripts/live-alert.js" async defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/live-alert.js" defer></script>
   </body>
 
 </html>
