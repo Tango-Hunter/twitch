@@ -45,7 +45,7 @@ select, .icon-btn {
 .dropdown-menu {
   position: absolute;
   top: 110%;
-  right: 0;
+  left: 0;
   min-width: 240px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
