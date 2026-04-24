@@ -86,5 +86,21 @@
         "link": "https://github.com/"
       }
     ]
+  },
+  {
+    "title": "Website Build Part 4",
+    "video": "GqyhJV3vuJM",
+    "date": "2026-04-22",
+    "description": "Part 4 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "tech": [
+      {
+        "name": "VS Code",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/"
+      }
+    ]
   }
 ]
