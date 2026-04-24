@@ -1,22 +1,92 @@
-# Tango Hunter Streaming Website
+# 🎮 Tango Hunter Streaming Website
+
+A responsive, tech-themed website built for Twitch streamer **Tango Hunter**, designed to serve as both a live stream hub and a growing library of technical content created during monthly tech-focused streams.
+
 ---
-## Contributors
-* Tango Hunter
+
+## 👤 Contributor
+- Tango Hunter
+
 ---
-### Description
-* This repository hosts the static website for Twitch streamer Tango_Hunter, featuring stream info, schedules, and curated content and was built live on stream.
+
+## 📖 Overview
+This repository contains the source code for the official Tango Hunter website. The project is built entirely with **vanilla HTML, CSS, and JavaScript**, focusing on performance, scalability, and a modern, technology-inspired user experience.
+
+The site showcases:
+- Stream information and schedule
+- Community links and content
+- A dedicated **Tech Streams** section where viewers can explore and recreate projects built live on stream
+
 ---
-### Additional Information
-* This repository is hosted on github pages and is redirected to our custom domain: [TangoHunter.com](TangoHunter.com).
-* Tutorials and streaming information will be updated as we progress through this project.
-* Technologies used: VS Code, Github
-* Languages used: HTML, CSS, JS (Tech Updates will include JSON in the future)
+
+## 🚀 Features
+- 📱 Fully responsive design (desktop + mobile navigation)
+- 🌗 Light/Dark mode with system preference detection
+- 🎨 Tech-inspired UI (grid background, scanlines, animations)
+- 📂 JSON-driven content system for easy updates
+- ⚡ Lazy-loaded, expandable sections for performance
+- 🔍 Sorting and filtering for tech content
+
 ---
-### Project Updates:
-* Week 1 Update (April 1, 2026): Created repository and organized our folder/content structure. Also created the basic HTML layout for the homepage and linked our CSS and JS files within the document.
-* Week 2 Update (April 8, 2026): Added the light/dark theme and live-alert in JS files, updated header content and added lorem ipsum text a placeholders for future content, and did some overall styling in CSS.
-* Week 3 Update (April 15, 2026): Coming soon...
-* Week 4 Update (April 22, 2026): Coming soon...
+
+## 🛠 Tech Stack
+- **Languages:** HTML, CSS, JavaScript  
+- **Tools:** VS Code, GitHub  
+- **Hosting:** GitHub Pages  
+- **Content System:** JSON (for dynamic tech stream content)
+
 ---
-### Tech Updates
-* Coming soon...
+
+## 🌐 Live Site
+This project is deployed via GitHub Pages and accessible at:  
+👉 https://tangohunter.com
+
+---
+
+## 📅 Project Updates
+
+### Week 1 (April 1, 2026)
+- Repository created  
+- Initial folder structure established  
+- Base HTML layout created and linked with CSS/JS  
+
+### Week 2 (April 8, 2026)
+- Implemented light/dark theme toggle  
+- Added live stream alert system  
+- Updated header and placeholder content  
+- Initial styling pass completed  
+
+### Week 3 (April 15, 2026)
+- In progress  
+
+### Week 4 (April 22, 2026)
+- In progress  
+
+---
+
+## 🧪 Tech Streams (Planned Expansion)
+The **Tech Streams** section is designed to grow into a structured learning hub where each stream includes:
+- Embedded video content  
+- Project descriptions  
+- Tools and technologies used  
+- Resources for viewers to recreate projects  
+
+---
+
+## 🔮 Future Plans
+- Expand JSON-driven content system  
+- Add search and advanced filtering  
+- Integrate GitHub project links  
+- Enhance UI/UX with additional interactive features  
+
+---
+
+## 📌 Notes
+- This is a fully **static website** — no backend required  
+- Designed for deployment on platforms like GitHub Pages, Netlify, or Cloudflare Pages  
+- Built and iterated on **live during streams**, making it both a project and learning resource  
+
+---
+
+## 📜 License
+This project is for personal and educational use. Licensing details may be updated in the future.
