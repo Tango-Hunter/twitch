@@ -93,6 +93,7 @@ The **Tech Streams** section is designed to grow into a structured learning hub 
 - This is a fully **static website** — no backend required  
 - Designed for deployment on platforms like GitHub Pages, Netlify, or Cloudflare Pages  
 - Built and iterated on **live during streams**, making it both a project and learning resource  
+- The idea to incorporate the JSON Converter into the website is for transparency and to show how data is stored and used in real world applications  
 
 ---
 
