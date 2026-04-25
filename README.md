@@ -4,7 +4,7 @@ A responsive, tech-themed website built for Twitch streamer **Tango Hunter**, de
 
 ---
 
-## 👤 Contributor
+## 👤 Contributors
 - Tango Hunter
 
 ---
@@ -57,15 +57,22 @@ This project is deployed via GitHub Pages and accessible at:
 - Initial styling pass completed  
 
 ### Week 3 (April 15, 2026)
-- In progress  
+- Added Mobile Nav menu  
+- Styled navigational links witha neon glow/reflective effects  
+- Replaced Lorem Ipsum placeholder text with actual content  
+- Added mobile responsive styles  
 
 ### Week 4 (April 22, 2026)
-- In progress  
+- Reformated file structure and file names to improve readability and fit industry standards  
+- Added Grid background with subtle animated scanlines for depth  
+- Added aria labels and accessibility designs  
+- SEO - Optimized  
 
 ---
 
-## 🧪 Tech Streams (Planned Expansion)
+## 🧪 Tech Streams 
 The **Tech Streams** section is designed to grow into a structured learning hub where each stream includes:
+- Content added on April 20, 2026
 - Embedded video content  
 - Project descriptions  
 - Tools and technologies used  
@@ -73,11 +80,12 @@ The **Tech Streams** section is designed to grow into a structured learning hub 
 
 ---
 
-## 🔮 Future Plans
-- Expand JSON-driven content system  
-- Add search and advanced filtering  
+## 🔮 JSON Conversion App
+- Expanded JSON-driven content system  
+- Added sorting and filtering  
 - Integrate GitHub project links  
 - Enhance UI/UX with additional interactive features  
+- CRUD features on local JSON files only with manual github updates (keeps site static)  
 
 ---
 
