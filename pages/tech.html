@@ -14,6 +14,7 @@ Description: Call to action page for tech-based streams hosted on youtube.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-theme" content="dark light" />
+    <meta name="description" content="Official website for Twitch streamer Tango Hunter. Live streams, schedule, and content.">
     <title>Tango Hunter | Tech Streams</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/tech.css">
@@ -23,7 +24,13 @@ Description: Call to action page for tech-based streams hosted on youtube.
     <header>
       <a id="top"></a>
 
-      <button class="mobile-toggle" id="mobileToggle">
+      <button 
+        class="mobile-toggle" 
+        id="mobileToggle" 
+        aria-label="Toggle Navigation Menu" 
+        aria-controls="mainNav" 
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -38,7 +45,7 @@ Description: Call to action page for tech-based streams hosted on youtube.
     </header>
 
     <!-- NAVIGATION -->
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
       <ul class="nav-list">
         <li><a href="https://tangohunter.com" class="neon-btn">Home</a></li>
         <li><a href="tech" class="neon-btn">Tech</a></li>
@@ -46,7 +53,7 @@ Description: Call to action page for tech-based streams hosted on youtube.
       </ul>
     </nav>
 
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
 
     <main>
 
@@ -95,7 +102,6 @@ Description: Call to action page for tech-based streams hosted on youtube.
     </footer>
     
     <script src="../scripts/main.js" defer></script>
-    <script src="../scripts/tech-data.js" defer></script>
     <script src="../scripts/tech.js" defer></script>
   </body>
   
