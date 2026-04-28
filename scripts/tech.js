@@ -2,15 +2,19 @@
  * Title: tech.js
  * Author: Tango Hunter
  * Date Created: 4/20/26
- * Date Modified: 4/20/26
+ * Date Modified: 4/27/26
  * Description: Script that allows users to filter/sort streams in the drop-down-menu and handles how the JSON data is displayed.
  */
 
-const data = window.techData;
+// --------------- CONFIG ---------------
+const GITHUB_JSON_URL = "https://cdn.jsdelivr.net/gh/Tango-Hunter/twitch@main/assets/data/tech-streams.json";
 
+// --------------- STATE ----------------
+let data = [];
 let selectedFilters = [];
 let currentSort = "newest";
 
+// ---------------- DOM -----------------
 const grid = document.getElementById("grid");
 const modal = document.getElementById("modal");
 const modalVideo = document.getElementById("modalVideo");
@@ -19,8 +23,27 @@ const streamSelect = document.getElementById("streamSelect");
 const filterMenu = document.getElementById("filterMenu");
 
 // ---------------- INIT ----------------
-init();
+loadData();
 
+// 🔥 LOAD DATA FROM GITHUB
+async function loadData() {
+  try {
+    const url = GITHUB_JSON_URL + "?v=" + Date.now(); // cache bust
+
+    const res = await fetch(url);
+    const json = await res.json();
+
+    data = Array.isArray(json) ? json : [json];
+
+    init();
+
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = "<p style='color:red'>Failed to load data</p>";
+  }
+}
+
+// ---------------- INIT ----------------
 function init() {
   buildDropdown();
   buildFilters();
@@ -29,6 +52,8 @@ function init() {
 
 // -------------- DROPDOWN --------------
 function buildDropdown() {
+  streamSelect.innerHTML = '<option value="">Select a stream</option>';
+
   data.forEach((item, i) => {
     const opt = document.createElement("option");
     opt.value = i;
@@ -44,6 +69,8 @@ streamSelect.onchange = e => {
 
 // --------------- FILTER ---------------
 function buildFilters() {
+  filterMenu.innerHTML = "";
+
   const techSet = new Set();
   data.forEach(d => d.tech.forEach(t => techSet.add(t.name)));
 
@@ -118,7 +145,7 @@ function openModal(item) {
   iframe.frameBorder = "0";
   iframe.allow =
     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-  iframe.referrerpolicy = "strict-origin-when-cross-origin"
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
   iframe.allowFullscreen = true;
 
   modalVideo.innerHTML = "";

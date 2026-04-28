@@ -3,7 +3,7 @@
     "title": "Streamer.bot Tutorial",
     "video": "1yLIqGDmxyw",
     "date": "2026-01-07",
-    "description": "Tango Hunter's first tech stream where he showcased streamer.bot. It is a program that runs locally on your PC to control and automate much of the stream. We did a deep dive starting with the basics and ultimately making some advanced actions.",
+    "description": "An introduction to Streamer.bot, covering core functionality and progressing into building custom automation workflows for stream management.",
     "tech": [
       {
         "name": "Streamer.bot",
@@ -19,7 +19,7 @@
     "title": "3D Modeling Part 1",
     "video": "9o4VtkomJBU",
     "date": "2026-02-04",
-    "description": "This is part 1 of a 2 part series where we design a riser station for a Bambu Lab A-1 3D printer. We made everything in Fusion 360.",
+    "description": "Part one of a two-part series focused on designing a custom riser station for the Bambu Lab A1 using Fusion 360.",
     "tech": [
       {
         "name": "Fusion360",
@@ -31,7 +31,7 @@
     "title": "3D Modeling Part 2",
     "video": "ps9tfXObnTk",
     "date": "2026-03-04",
-    "description": "This is part 2 of a 2 part series where we design a riser station for a Bambu Lab A-1 3D printer. We made everything in Fusion 360.",
+    "description": "Continuation of the riser station project, refining the design and preparing the model for practical use and production.",
     "tech": [
       {
         "name": "Fusion360",
@@ -43,7 +43,7 @@
     "title": "Website Build Part 1",
     "video": "OV_wRxhWegM",
     "date": "2026-04-01",
-    "description": "Part 1 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Kickoff of a four-part series building a custom streaming website, including project setup, structure, and initial development workflow.",
     "tech": [
       {
         "name": "VS Code",
@@ -59,7 +59,7 @@
     "title": "Website Build Part 2",
     "video": "dwVPQHqyf38",
     "date": "2026-04-08",
-    "description": "Part 2 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Expansion of the website build, focusing on layout development, styling, and refining the user interface.",
     "tech": [
       {
         "name": "VS Code",
@@ -75,7 +75,7 @@
     "title": "Website Build Part 3",
     "video": "qm1W2B7p4xM",
     "date": "2026-04-15",
-    "description": "Part 3 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Further development of the site, introducing interactivity and integrating dynamic behavior using JavaScript.",
     "tech": [
       {
         "name": "VS Code",
@@ -91,7 +91,7 @@
     "title": "Website Build Part 4",
     "video": "GqyhJV3vuJM",
     "date": "2026-04-22",
-    "description": "Part 4 of 4 for building a custom website for streaming. We wrote everything in VS Code and stored our data online in Github. All coding is written in HTML, CSS, and JS.",
+    "description": "Finalization of the website, including optimization, feature completion, and preparing the project for deployment.",
     "tech": [
       {
         "name": "VS Code",
