@@ -97,5 +97,7 @@ The **Tech Streams** section is designed to grow into a structured learning hub 
 
 ---
 
-## 📜 License
-This project is for personal and educational use. Licensing details may be updated in the future.
+### 📜 License
+
+MIT License
+Copyright (c) 2026 Tango Hunter
