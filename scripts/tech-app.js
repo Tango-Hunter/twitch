@@ -1,8 +1,7 @@
 /**
- * Title: json.js
+ * Title: tech-app.js
  * Author: Tango Hunter
  * Date Created: 4/20/26
- * Date Modified: 4/20/26
  * Description: Script that controls the form and preview windows and allows for CRUD operations for a local JSON file.
  */
 

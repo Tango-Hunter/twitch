@@ -1,0 +1,363 @@
+<!--
+Title: synara.html
+Author: Tango Hunter
+Date Created: 7/20/26
+Description: SYNARA Profile.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-theme" content="dark light" />
+    <meta name="description" content="Official website for Twitch streamer Tango Hunter. Live streams, schedule, and content.">
+    <title>Tango Hunter | SYNARA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/synara.css">
+  </head>
+  
+  <body>
+
+    <header class="synara-header">
+      <a id="top"></a>
+
+      <button 
+        class="mobile-toggle" 
+        id="mobileToggle" 
+        aria-label="Toggle Navigation Menu" 
+        aria-controls="mainNav" 
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <h1>SYNARA</h1>
+
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a href="https://tangohunter.com" class="neon-btn">Home</a></li>
+        <li><a href="tech" class="neon-btn">Tech</a></li>
+        <li><a href="synara/updates" class="neon-btn">Updates</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- INTRO -->
+      <section class="intro">
+
+        <div class="intro-image">
+          <img src="assets/images/synara-base-model.png" alt="SYNARA">
+        </div>
+
+        <div class="intro-content">
+          <h2>Meet SYNARA</h2>
+          <p>
+            SYNARA is a Discord-native AI assistant created by Tango Hunter with one goal in mind: helping communities spend less time managing their servers and more time enjoying them.
+          </p>
+          <br>
+          <p>
+            Rather than relying on external dashboards, complicated setup pages, or third-party accounts, SYNARA is designed to work where your community already lives—inside Discord. From moderation and automation to intelligent conversations and community engagement, every feature is built around simplicity, privacy, and reliability.
+          </p>
+          <br>
+          <p>
+            More than a collection of commands, SYNARA has her own personality. She can hold natural conversations, answer questions, offer commentary, and occasionally reveal a bit of her own humor. Professional when needed, playful when appropriate, and always evolving, she is designed to feel like a genuine member of your community instead of just another utility bot.
+          </p>
+          <br><br>
+          <p>
+            Built by a streamer, engineered by a developer, and designed for communities.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- FEATURE CARDS -->
+      <section class="features">
+
+          <h2>Capabilities</h2>
+
+          <div class="feature-grid">
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                💬
+              </div>
+                <h3>
+                  AI Conversations
+                </h3>
+                <p>
+                  Hold natural conversations with an AI that remembers context, responds intelligently, and develops interactions through SYNARA's unique personality rather than sounding like a generic chatbot.
+                </p>
+            </article>
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                🛡
+              </div>
+              <h3>
+                Moderation
+              </h3>
+              <p>
+                Powerful moderation and server management tools help keep your community organized, allowing administrators to focus less on routine tasks and more on their members.
+              </p>
+            </article>
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                👥
+              </div>
+              <h3>
+                Community Engagement
+              </h3>
+              <p>
+                Welcome new members, answer common questions, encourage conversations, and create a more active, engaging community through intelligent automation.
+              </p>
+            </article>
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                📡
+              </div>
+              <h3>
+                Streaming Integration
+              </h3>
+              <p>
+                Built alongside Tango Hunter's streaming ecosystem, SYNARA can assist with announcements, notifications, community interaction, and future stream-focused features.
+              </p>
+            </article>
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                ⚙
+              </div>
+              <h3>
+                Discord Native
+              </h3>
+              <p>
+                Configure everything directly inside Discord without visiting external dashboards or creating additional accounts. Administration happens where your moderators already work.
+              </p>
+            </article>
+
+            <article class="feature-card card">
+              <div class="feature-icon">
+                🔒
+              </div>
+              <h3>
+                Secure by Design
+              </h3>
+              <p>
+                SYNARA is designed to minimize stored information and never requires third-party account creation. By keeping configuration inside Discord, the amount of sensitive information entrusted to the application is intentionally kept to a minimum.
+              </p>
+            </article>
+
+          </div>
+
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="workflow">
+
+        <h2>
+          How It Works
+        </h2>
+
+        <div class="workflow-container">
+
+          <div class="workflow-step card">
+            <div class="step-number">
+              1
+            </div>
+            <h3>
+              Invite SYNARA
+            </h3>
+            <p>
+              Add SYNARA to your Discord server using the standard Discord invite.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">
+            →
+          </div>
+
+          <div class="workflow-step card">
+            <div class="step-number">
+              2
+            </div>
+            <h3>
+              Run Setup
+            </h3>
+            <p>
+              Execute the setup command inside a private administrator channel.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">
+            →
+          </div>
+
+          <div class="workflow-step card">
+            <div class="step-number">
+              3
+            </div>
+            <h3>
+              Customize
+            </h3>
+            <p>
+              Configure moderation, announcements, personalities, and integrations.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">
+            →
+          </div>
+
+          <div class="workflow-step card">
+            <div class="step-number">
+              4
+            </div>
+            <h3>
+              Enjoy
+            </h3>
+            <p>
+              Once configured, SYNARA immediately begins supporting your community with moderation, automation, and intelligent interactions.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="workflow-note">
+          No websites. No external dashboards. No additional accounts. Just Discord.
+        </p>
+
+      </section>
+
+      <!-- TECHNOLOGY STACK -->
+      <section class="technology">
+
+        <h2>
+          Built With Modern Technologies
+        </h2>
+
+        <div class="technology-grid">
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-js.png" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>
+              A modern, event-driven language that provides the flexibility needed for rapid feature development and long-term maintainability.
+            </p>
+          </article>
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-node.png" alt="Node.js">
+            <h3>Node.js</h3>
+            <p>
+              Running on Node.js for fast asynchronous processing and scalable architecture.
+            </p>
+          </article>
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-discord.png" alt="Discord.js">
+            <h3>Discord.js</h3>
+            <p>
+              Built using Discord.js to provide a seamless, Discord-native experience.
+            </p>
+          </article>
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-openai.png" alt="OpenAI">
+            <h3>OpenAI</h3>
+            <p>
+              AI-powered conversations, contextual reasoning and dynamic responses.
+            </p>
+          </article>
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-railway.png" alt="Railway">
+            <h3>Railway</h3>
+            <p>
+              Reliable cloud hosting enables continuous deployment, automatic updates, and dependable uptime without requiring dedicated infrastructure.
+            </p>
+          </article>
+
+          <article class="technology-card card">
+            <img src="assets/images/icon-github.png" alt="GitHub">
+            <h3>GitHub</h3>
+            <p>
+              Source control, automated deployment, and continuous development.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- DESIGN PRINCIPLES -->
+      <section class="principles">
+
+        <h2>
+          Design Principles
+        </h2>
+
+        <div class="principles-grid">
+
+          <article class="principle-card card">
+            <h3>Privacy First</h3>
+            <p>
+              SYNARA is designed to collect only the information necessary to provide requested functionality.
+            </p>
+          </article>
+
+          <article class="principle-card card">
+            <h3>Discord Native</h3>
+            <p>
+              Configuration happens inside Discord. No external dashboards. No additional accounts.
+            </p>
+          </article>
+
+          <article class="principle-card card">
+            <h3>Security Through Simplicity</h3>
+            <p>
+              Every additional integration introduces complexity. By keeping the architecture intentionally simple, SYNARA reduces maintenance overhead, minimizes potential failure points, and remains easier to secure and evolve over time.
+            </p>
+          </article>
+
+          <article class="principle-card card">
+            <h3>Always Evolving</h3>
+            <p>
+              SYNARA continues to grow through community feedback, experimentation, and ongoing development.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+      <a href="#top" class="neon-btn">To Top</a>
+      <span class="copywrite">© 2026 Tango Hunter | Twitch Streamer</span>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+
+  </body>
+
+</html>

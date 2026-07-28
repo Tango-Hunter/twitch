@@ -21,6 +21,9 @@ Description: Style Sheet for the Twitch Website
   --text-main:#E6F4EA;
   --text-secondary:#9FB8A7;
   --border:#1f5f3a;
+  --shadow:
+    0 0 10px rgba(0,255,120,.20),
+    0 0 25px rgba(0,255,120,.08);
 }
 
 [data-theme="light"]{
@@ -31,6 +34,9 @@ Description: Style Sheet for the Twitch Website
   --text-main:#1B2A1F;
   --text-secondary:#4C5F52;
   --border:#1f5f3a;
+  --shadow:
+    0 0 10px rgba(0,255,120,.20),
+    0 0 25px rgba(0,255,120,.08);
 }
 
 body {
@@ -297,6 +303,7 @@ main {
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-bottom: 3rem;
 }
 
 /* TERMINALS */
@@ -363,11 +370,13 @@ iframe {
 
 h2, h3 {
   text-align: left;
+  padding-bottom: .75rem;
 }
 
 /* DIVIDED CONTENT */
 section {
   padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 .socials-link {
@@ -376,7 +385,6 @@ section {
 
 .cards {
   display: flex;
-  margin-top: .5rem;
   gap: 2rem;
   justify-content: center;
 }

@@ -1,0 +1,232 @@
+<!--
+Name: updates-app.html
+Author: Tango Hunter
+Date Created: 7/27/26
+Description: JSON web-app for Tango Hunter to store updates for SYNARA on a local json file. Allows for all CRUD operations.
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tango Hunter | JSON Editor</title>
+    <link rel="stylesheet" href="../styles/json-editor.css">
+  </head>
+
+  <body>
+
+      <div id="top"></div>
+
+      <div class="container">
+
+          
+          <!-- NAVIGATION -->
+          
+
+          <nav class="top-nav">
+
+              <a href="updates">
+
+                  ← Go back to Updates
+
+              </a>
+
+              <a href="#filePreview">
+
+                  Go to File Preview ↓
+
+              </a>
+
+          </nav>
+
+          
+          <!-- HEADER -->
+          
+
+          <h1>SYNARA Updates Editor</h1>
+
+          <div id="editBadge"
+              class="edit-badge hidden">
+
+              Editing Update
+
+          </div>
+
+          
+          <!-- FORM -->
+          
+
+          <form id="jsonForm">
+
+              <input
+                  id="version"
+                  placeholder="Version">
+
+              <input
+                  id="title"
+                  placeholder="Title">
+
+              <input
+                  type="date"
+                  id="date">
+
+              <textarea
+                  id="summary"
+                  placeholder="Summary"></textarea>
+
+              <h3>Update Notes</h3>
+
+              <div id="notesContainer"></div>
+
+              <button
+                  type="button"
+                  onclick="addNote()">
+
+                  + Add Note
+
+              </button>
+
+          </form>
+
+          
+          <!-- JSON PREVIEW -->
+          
+
+          <h3>JSON Preview</h3>
+
+          <pre id="output">{}</pre>
+
+          
+          <!-- FILE CONTROLS -->
+          
+
+          <div class="file-controls">
+
+              <button onclick="openFile()">
+
+                  Open JSON File
+
+              </button>
+
+              <button
+                  id="saveBtn"
+                  onclick="appendEntry()">
+
+                  Save Entry
+
+              </button>
+
+              <button
+                  class="danger"
+                  onclick="deleteEntry()">
+
+                  Delete Entry
+
+              </button>
+
+              <button
+                  class="secondary"
+                  onclick="clearSelection()">
+
+                  Clear Form
+
+              </button>
+
+          </div>
+
+          
+          <!-- STATUS -->
+          
+
+          <div
+              id="status"
+              class="status">
+
+          </div>
+
+          
+          <!-- FILE PREVIEW -->
+          
+
+          <div
+              id="filePreview"
+              class="preview-section">
+
+              <a
+                  href="#top"
+                  class="scroll-btn">
+
+                  ↑ Back to Top
+
+              </a>
+
+              <h2>
+
+                  Click an Entry to Edit
+
+              </h2>
+
+              <div id="fileOutput"></div>
+
+              <a
+                  href="#top"
+                  class="scroll-btn">
+
+                  ↑ Back to Top
+
+              </a>
+
+          </div>
+
+      </div>
+
+      
+      <!-- CONFIRM MODAL -->
+      
+
+      <div
+          id="confirmModal"
+          class="modal">
+
+          <div class="modal-content">
+
+              <h3>
+
+                  Confirm Action
+
+              </h3>
+
+              <pre id="confirmJSON"></pre>
+
+              <div class="modal-actions">
+
+                  <button
+                      onclick="confirmAction()">
+
+                      Confirm
+
+                  </button>
+
+                  <button
+                      class="danger"
+                      onclick="closeModal()">
+
+                      Cancel
+
+                  </button>
+
+              </div>
+
+          </div>
+
+      </div>
+
+      <script src="../scripts/updates-app.js"></script>
+
+  </body>
+
+</html>

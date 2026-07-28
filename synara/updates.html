@@ -1,8 +1,8 @@
 <!--
-Title: synara.html
+Title: updates.html
 Author: Tango Hunter
 Date Created: 7/20/26
-Description: SYNARA Profile.
+Description: SYNARA Updates.
 -->
 
 <!DOCTYPE html>
@@ -16,6 +16,7 @@ Description: SYNARA Profile.
     <meta name="description" content="Official website for Twitch streamer Tango Hunter. Live streams, schedule, and content.">
     <title>Tango Hunter | SYNARA</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/updates.css">
   </head>
   
   <body>
@@ -47,8 +48,8 @@ Description: SYNARA Profile.
     <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
       <ul class="nav-list">
         <li><a href="https://tangohunter.com" class="neon-btn">Home</a></li>
-        <li><a href="../pages/tech" class="neon-btn">Tech</a></li>
-        <li><a href="patch-notes/updates" class="neon-btn">Updates</a></li>
+        <li><a href="../tech" class="neon-btn">Tech</a></li>
+        <li><a href="../synara" class="neon-btn">SYNARA</a></li>
       </ul>
     </nav>
 
@@ -57,7 +58,18 @@ Description: SYNARA Profile.
     <!-- MAIN -->
     <main>
 
-      <h1>Under Construction</h1>
+      <h2>SYNARA Updates</h2> 
+
+      <div id="grid" class="grid"></div> 
+      
+      <!-- MODAL -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">✖</span>
+          <div id="modalContent"></div> 
+          <div id="modalInfo"></div> 
+        </div>
+      </div>
 
     </main>
     
@@ -68,6 +80,7 @@ Description: SYNARA Profile.
     </footer>
 
     <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/updates.js" defer></script>
 
   </body>
 
