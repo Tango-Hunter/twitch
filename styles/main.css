@@ -420,6 +420,18 @@ footer {
   z-index: 0;
 }
 
+.app-link {
+    color: var(--accent-main);
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    text-decoration:none;
+}
+
+.app-link:hover{
+    text-decoration:underline;
+}
+
 .copywrite {
   position: absolute;
   bottom: -1rem;

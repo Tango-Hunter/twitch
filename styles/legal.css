@@ -1,0 +1,197 @@
+/*
+Title: legal.css
+Author: Tango Hunter
+Date Created: 7/29/26
+Description: Shared stylesheet for legal pages.
+*/
+
+
+/* PAGE HEADER */
+
+.synara-header{
+
+    background-image: url("../assets/images/SYNARA-banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: auto;
+    min-height: 300px;
+    border: 2px solid #00C853;
+    border-radius: 15px; 
+}
+
+h1 {
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+}
+
+
+/* MAIN */
+
+main{
+    width:min(1000px,92%);
+    margin:3rem auto 5rem auto;
+}
+
+
+/* HEADINGS */
+
+main h2{
+    margin-bottom:.5rem;
+    font-size:2.5rem;
+    text-align:center;
+}
+
+main > p:first-of-type{
+    text-align:center;
+    color:var(--text-secondary);
+    margin-bottom:2.5rem;
+}
+
+
+/* SECTIONS */
+
+main section{
+    background:var(--bg-secondary);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:2rem;
+    margin-bottom:2rem;
+    box-shadow:0 0 18px rgba(0,200,83,.08);
+    transition:
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+main section:hover{
+    border-color:var(--accent-main);
+    box-shadow:0 0 20px rgba(0,200,83,.18);
+    transform:translateY(-2px);
+}
+
+
+/* SECTION TITLES */
+
+main section h3{
+    margin-top:0;
+    margin-bottom:1rem;
+    color:var(--accent-main);
+    font-size:1.4rem;
+    padding-bottom:.5rem;
+    border-bottom:1px solid rgba(0,200,83,.25);
+}
+
+
+/* PARAGRAPHS */
+
+main p{
+    line-height:1.8;
+    margin-bottom:1rem;
+}
+
+main p:last-child{
+    margin-bottom:0;
+
+}
+
+
+/* LISTS */
+
+main ul{
+    margin: 1rem 0 1.5rem 1.5rem;
+    padding:0;
+    text-align: left;
+}
+main li{
+    margin-bottom:.75rem;
+    line-height:1.7;
+}
+
+main li::marker{
+    color:var(--accent-main);
+}
+
+
+/* STRONG */
+
+main strong{
+    color:var(--accent-main);
+}
+
+
+/* CALLOUT BOX */
+
+.callout{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,200,83,.08),
+            transparent
+        );
+    border-left:4px solid var(--accent-main);
+    padding:1rem 1.25rem;
+    border-radius:8px;
+    margin:2rem 0;
+}
+
+
+/* TABLE OF CONTENTS */
+
+.toc{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:1rem;
+    margin-bottom:3rem;
+}
+
+.toc a{
+    display:block;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:.9rem;
+    transition:.2s ease;
+}
+
+.toc a:hover{
+    border-color:var(--accent-main);
+    transform:translateY(-2px);
+}
+
+
+/* PRIVACY AT A GLANCE */
+
+.quick-summary{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.quick-summary div{
+    background:rgba(0,200,83,.05);
+    border:1px solid rgba(0,200,83,.15);
+    border-radius:10px;
+    padding:1rem;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    main{
+        width:94%;
+    }
+
+    main h2{
+        font-size:2rem;
+    }
+
+    main section{
+        padding:1.5rem;
+    }
+
+}
