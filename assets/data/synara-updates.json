@@ -1,30 +1,37 @@
 [
   {
-    "version": "1",
-    "title": "1",
-    "date": "2026-07-30",
-    "summary": "1",
+    "version": "v3.0.1",
+    "title": "Patch",
+    "date": "2026-07-25",
+    "summary": "Twitch eventSub Fix, Repository Updates, Setup Wizard Fix",
     "notes": [
-      "1"
+      "Fixed an issue within the Twitch eventSub. Service is more robust and added a backend service that allows Tango to do a heath check on the service.",
+      "Repository udates include removing stale/unused API call functions, adding a new field to feature flags for Display purposes, and added new functions for repository calls for Twitch eventSub.",
+      "Fixed an issue with the Setup Wizard that created duplicate features for registry names that did not match feature flag names within the respository. This would have disabled features that server owners were trying to enable. Registry names for features and Database Repository names now match and the Repository includes a Display Name for users and a variable name for backend services."
     ]
   },
   {
-    "version": "2",
-    "title": "2",
-    "date": "2026-07-27",
-    "summary": "2",
+    "version": "v3.0.0",
+    "title": "Major Update: New Features",
+    "date": "2026-07-10",
+    "summary": "New Content: Knowledge Base and Registry\nNew Features: Automated Update Broadcaster, Welcome Message, Setup Wizard, Automated Guild Removal",
     "notes": [
-      "2",
-      "2"
+      "Knowledge Base:\nPurpose\nThe Knowledge Base is SYNARA's built-in documentation system.\n\nIt provides a central location where members and administrators can learn about available features, commands, and server configuration without needing to leave Discord.\n\nAs SYNARA continues to grow, the Knowledge Base will grow alongside her, providing up-to-date documentation for every major feature.\nHow It Works\nDocumentation is organized into easy-to-read guides covering community features, administrator tools, server configuration, and future updates.\n\nMembers can quickly look up information without searching through previous messages or external websites.\n\nFuture versions of SYNARA will include a /docs command that allows documentation to be viewed directly from Discord.\nCommands\n/docs\n\nBrowse SYNARA's available documentation.\n\nNotes\nDocumentation is bundled directly with SYNARA and updates automatically when new versions are released.\nNew features will include documentation as part of each release.\nAdministrators will automatically receive notifications when documentation is updated.\nThe Knowledge Base is intended to become the primary reference for using and configuring SYNARA.",
+      "Registry:\nInternal document that controls current version and all documents included within the Knowledge Base",
+      "Broadcaster:\nThis feature has two functions. The main function is to alert all servers with SYNARA installed when SYNARA is updated. This alert will display the new version, the title of the update, and the content of that update. If the update is a minor patch, a link to the patch notes page is provided instead. The secondary function allows Tango Hunter to send a broadcasted message to all servers in the event that the service may experience a downtime, is undergoing maintenance, or for any reason it is necessary that all servers are notified of something.\nAll broadcasts are sent to the channel that is configured for SYNARA logs.",
+      "Welcome Message:\nWelcome to SYNARA\nIntroduction\nHello! My name is SYNARA, and I'm excited to join your community.\n\nI'm an AI-powered community assistant designed to help server owners automate repetitive tasks, encourage community engagement, and make managing your Discord server a little easier.\n\nThis welcome message is only posted once when I first join your server.\nMy Purpose\nI'm capable of much more than answering questions.\n\nDepending on which features your administrators choose to enable, I can help with community events, Twitch integration, birthdays, moderator applications, scheduled announcements, trivia, onboarding new members, and much more.\n\nMembers may view the currently available commands at any time by using:\n\n!commands\n\nAs new features are added, I'll continue to grow alongside your community.\nAdministrator Setup\nServer Administrators: Create (or choose) a private administrative channel and run /setup to begin configuring SYNARA\n\nI'll guide you through configuring your server step by step, including channels, roles, users, and available features.\n\nThe setup process is designed to be simple and should only take a few minutes to complete.\nClosing\nThank you for inviting me into your community.\n\nI look forward to helping your server grow and making everyday management a little easier.\n\n— SYNARA\n\nSpecial thanks from Tango Hunter for giving me a place to call home.",
+      "Setup Wizard:\nSYNARA Setup Guide\nWelcome\nWelcome to the SYNARA Setup Wizard.\n\nThis guide will walk you through configuring your server one step at a time. No prior experience is required, and most servers can complete the entire setup process in less than 15 minutes.\n\nDuring setup, I'll help configure your server's required channels, roles, users, and available features.\nBefore You Begin\nBefore enabling features, make sure your server contains any channels and roles you intend to use.\n\nSome features require specific channels, roles, or users to function correctly.\n\nAs you progress through setup, I'll explain what each feature requires and guide you through the configuration process.\nConfiguration\nThroughout setup you'll use Discord's slash (/) commands to configure your server.\n\nEach step builds on the previous one until your server has been fully configured.\n\nIf setup is interrupted for any reason before completion, no changes will be saved and the setup process must be started again.\nHelpful Commands\nAt any time you can review your server's configuration using:\n\n/features\n\nDisplays every available feature and its current status.\n\n/settings\n\nDisplays your server's current configuration.\n\n/commands\n\nDisplays the available SYNARA commands for your server.\nGetting Started\nWhen you're ready, continue through the setup wizard.\n\nI'll guide you through every required step, explain each feature as it's introduced, and verify your selections before saving your server's configuration.\n\nLet's get your community up and running.",
+      "Automated Guild Removal:\nBackend service that removes ALL stored settings for a server that removes SYNARA from their server. SYNARA does not store stale data."
     ]
   },
   {
-    "version": "1",
-    "title": "1",
-    "date": "2026-07-26",
-    "summary": "1",
+    "version": "v2.5.0",
+    "title": "Minor Update: New Features",
+    "date": "2026-06-25",
+    "summary": "Two New features: Nicknames and Sticky Messages",
     "notes": [
-      "1"
+      "Nicknames Feature\nPurpose\nThe Nickname feature allows members to choose how SYNARA addresses them during conversations.\nHow It Works\nMembers can provide a preferred nickname using the !nickname command.\n\nOnce a nickname has been saved, SYNARA will use it when referring to that member whenever appropriate.\n\nRunning the command again replaces the existing nickname.\n\nRunning the command without providing a nickname removes the saved nickname and restores normal name handling.\nCommands\n!nickname <nickname>\n\nSets or updates your preferred nickname.\n\n!nickname\n\nRemoves your saved nickname.\nNotes\nNicknames are shared across every server where both you and SYNARA are present.\nNicknames should remain appropriate for all audiences.\nSYNARA may reject nicknames that violate community standards.",
+      "Sticky Messages:\nPurpose\nSticky Messages keep important information visible by automatically moving a designated message back to the bottom of a channel after conversations have slowed down.\n\nThis is ideal for rules, instructions, FAQs, event information, or other important reminders that should remain easy for members to find.\nHow It Works\nAdministrators can create a sticky message using the /sticky command.\n\nBefore the sticky message is published, SYNARA displays a private preview allowing the administrator to approve or cancel the operation.\n\nOnce created, SYNARA monitors activity within that channel.\n\nWhenever members are actively chatting, SYNARA waits until the conversation has been inactive for 5 minutes before deleting the previous sticky message and reposting it at the bottom of the channel.\n\nThis allows conversations to continue naturally while ensuring important information remains easily visible.\nCommands\n/sticky create\n\nCreates a sticky message in the current channel.\n\n/sticky delete\n\nRemoves the sticky message from the current channel.\nNotes\nOnly one sticky message may exist per channel.\nSticky messages remain in the channel where they were created.\nThe five-minute delay prevents unnecessary reposting during active conversations.\nSticky messages are best suited for instructions, server information, and frequently referenced content."
     ]
   }
 ]
