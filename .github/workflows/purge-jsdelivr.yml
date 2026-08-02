@@ -1,0 +1,35 @@
+name: Purge jsDelivr Cache
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/data/**/*.json'
+
+concurrency:
+  group: purge-jsdelivr
+  cancel-in-progress: true
+
+jobs:
+  purge:
+    name: Purge Cached JSON Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Purge jsDelivr cache
+        run: |
+          FILES=(
+            "assets/data/synara-updates.json"
+            "assets/data/tech-streams.json"
+          )
+
+          for file in "${FILES[@]}"; do
+            url="https://purge.jsdelivr.net/gh/Tango-Hunter/twitch@main/$file"
+
+            echo "Purging $url"
+            curl --silent --show-error --fail "$url" || true
+            echo ""
+          done
+
+          echo "Finished purging jsDelivr cache."
