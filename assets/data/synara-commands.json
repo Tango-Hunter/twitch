@@ -1,0 +1,214 @@
+[
+  {
+    "name": "/docs",
+    "category": "Administrative Command",
+    "purpose": "Provides quick access to SYNARA's documentation, allowing administrators to browse available guides and reference material directly from Discord."
+  },
+  {
+    "name": "/setup",
+    "category": "Administrative Command",
+    "purpose": "Launches the SYNARA Setup Wizard, providing a guided process for configuring required channels, roles, users, and other server settings needed by SYNARA's features."
+  },
+  {
+    "name": "!nickname",
+    "category": "Community Command",
+    "purpose": "Sets the preferred name SYNARA will use when speaking to you. Running the command again replaces your existing nickname, while running it without a name removes your saved nickname."
+  },
+  {
+    "name": "!draw",
+    "category": "Community Command",
+    "purpose": "Generate artwork based on your description. SYNARA interprets your prompt creatively to produce a unique image, and occasional drawing glitches are an intentional part of her personality."
+  },
+  {
+    "name": "!birthday",
+    "category": "Community Command",
+    "purpose": "Registers or updates your birthday using the MM/DD format. SYNARA stores only the month and day, never the birth year. Running the command again replaces your previously saved birthday."
+  },
+  {
+    "name": "!nextBirthdays",
+    "category": "Community Command",
+    "purpose": "Displays all registered birthdays occurring during the next three months so members can see upcoming celebrations within the community."
+  },
+  {
+    "name": "/sticky",
+    "category": "Administrative Command",
+    "purpose": "Creates or removes a sticky message for the current channel. Sticky messages automatically return to the bottom of the channel after conversations slow down, ensuring important information remains visible.",
+    "subOptions": [
+      {
+        "name": "Create",
+        "description": "Create a sticky message for the current channel."
+      },
+      {
+        "name": "Delete",
+        "description": "Remove the sticky message from the current channel."
+      }
+    ]
+  },
+  {
+    "name": "/feature",
+    "category": "Administrative Command",
+    "purpose": "Enables or disables individual SYNARA features for the current server. Feature availability is managed independently for each Discord server.",
+    "subOptions": [
+      {
+        "name": "Enable",
+        "description": "Enable a specific SYNARA feature."
+      },
+      {
+        "name": "Disable",
+        "description": "Disable a specific SYNARA feature."
+      }
+    ]
+  },
+  {
+    "name": "/features",
+    "category": "Administrative Command",
+    "purpose": "Displays the current status of every SYNARA feature, allowing administrators to quickly determine which features are enabled or disabled for the server."
+  },
+  {
+    "name": "/settings",
+    "category": "Administrative Command",
+    "purpose": "Displays the server's current SYNARA configuration, including configured channels, roles, users, ignored channels, and other settings used by enabled features."
+  },
+  {
+    "name": "/ignorechannel",
+    "category": "Administrative Command",
+    "purpose": "Controls which channels SYNARA observes for natural conversation. Ignored channels are excluded from SYNARA's Observation feature.",
+    "subOptions": [
+      {
+        "name": "Add",
+        "description": "Add the current channel to SYNARA's ignored channel list."
+      },
+      {
+        "name": "Remove",
+        "description": "Remove the current channel from SYNARA's ignored channel list."
+      }
+    ]
+  },
+  {
+    "name": "/setrole",
+    "category": "Administrative Command",
+    "purpose": "Assigns a Discord role to one of SYNARA's configurable role settings. Configured roles are used by various features such as verification, birthdays, moderation, and other automated systems."
+  },
+  {
+    "name": "/removerole",
+    "category": "Administrative Command",
+    "purpose": "Removes a configured administrator or moderator role from the server's SYNARA configuration. This command only affects role assignments managed by SYNARA and does not delete the Discord role itself."
+  },
+  {
+    "name": "/setchannel",
+    "category": "Administrative Command",
+    "purpose": "Assigns a Discord channel to one of SYNARA's configurable channel settings. These settings determine where automated announcements, messages, and feature output are posted."
+  },
+  {
+    "name": "/setuser",
+    "category": "Administrative Command",
+    "purpose": "Assigns a Discord user to one of SYNARA's configurable user settings, such as the Counting Bot or Server Leader, allowing features that depend on specific users to function correctly."
+  },
+  {
+    "name": "/commands",
+    "category": "Administrative Command",
+    "purpose": "Displays a complete list of administrative commands available to users with the appropriate permissions."
+  },
+  {
+    "name": "!commands",
+    "category": "Community Command",
+    "purpose": "Displays a complete list of community commands available to all members, along with a brief description of each command."
+  },
+  {
+    "name": "/embed",
+    "category": "Administrative Command",
+    "purpose": "Creates a professional Discord embed that appears as though it was sent directly by SYNARA. A private preview is shown before the embed is published, allowing administrators to review or cancel it."
+  },
+  {
+    "name": "/event",
+    "category": "Administrative Command",
+    "purpose": "Creates and manages scheduled announcements that SYNARA automatically publishes according to their configured schedule. Supports both recurring and one-time events.",
+    "subOptions": [
+      {
+        "name": "Scheduled Event",
+        "description": "Creates a new scheduled announcement."
+      },
+      {
+        "name": "Manage Scheduled Event",
+        "description": "Edit, pause, resume, skip, or delete an existing scheduled announcement."
+      }
+    ]
+  },
+  {
+    "name": "!bonk",
+    "category": "Community Command",
+    "purpose": "Playfully bonk another member. SYNARA tracks bonks as part of a lighthearted community feature, and rare self-bonks may occur randomly."
+  },
+  {
+    "name": "!points",
+    "category": "Community Command",
+    "purpose": "Displays your current Efficiency Point total, allowing you to track your progress and compare your activity within the community."
+  },
+  {
+    "name": "!linktwitch",
+    "category": "Community Command",
+    "purpose": "Links your Twitch account to SYNARA using your Twitch username. Once linked, SYNARA can monitor your streams, announce when you go live, and track your Twitch statistics."
+  },
+  {
+    "name": "!mytwitch",
+    "category": "Community Command",
+    "purpose": "Displays the Twitch account currently linked to your Discord account so you can verify your configuration."
+  },
+  {
+    "name": "!unlinktwitch",
+    "category": "Community Command",
+    "purpose": "Removes the Twitch account currently linked to your Discord account. You can relink a different Twitch account at any time using !linktwitch."
+  },
+  {
+    "name": "!twitchstats",
+    "category": "Community Command",
+    "purpose": "Displays Twitch statistics collected for your linked Twitch account, including information tracked by SYNARA."
+  },
+  {
+    "name": "/modapps",
+    "category": "Administrative Command",
+    "purpose": "Controls the complete moderator application system, including opening and closing applications and managing the moderator application blacklist.",
+    "subOptions": [
+      {
+        "name": "Open",
+        "description": "Open moderator applications."
+      },
+      {
+        "name": "Close",
+        "description": "Close moderator applications."
+      },
+      {
+        "name": "Blacklist Add",
+        "description": "Add a user to the moderator application blacklist."
+      },
+      {
+        "name": "Blacklist Remove",
+        "description": "Remove a user from the moderator application blacklist."
+      },
+      {
+        "name": "Blacklist List",
+        "description": "Display every user currently on the moderator application blacklist."
+      }
+    ]
+  },
+  {
+    "name": "!trivia",
+    "category": "Community Command",
+    "purpose": "Starts a round of trivia and records your results as part of SYNARA's ongoing trivia leaderboard and statistics system."
+  },
+  {
+    "name": "!leaderboard",
+    "category": "Community Command",
+    "purpose": "Displays the trivia leaderboard along with your personal trivia statistics, allowing members to compare their long-term performance."
+  },
+  {
+    "name": "!joke",
+    "category": "Community Command",
+    "purpose": "Ask SYNARA to share one of her jokes. Responses are intended to be lighthearted and reflect her unique personality and sense of humor."
+  },
+  {
+    "name": "!fact",
+    "category": "Community Command",
+    "purpose": "Receive a random interesting fact accompanied by SYNARA's own thoughts and commentary to make learning more engaging."
+  }
+]

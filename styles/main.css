@@ -181,6 +181,24 @@ h1 {
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.75);
 }
 
+.synara-header{
+
+    background-image: url("../assets/images/SYNARA-banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: auto;
+    min-height: 300px;
+    border: 2px solid #00C853;
+    border-radius: 15px; 
+}
+
+.synara-header h1 {
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+}
+
 /* NAVIGATIONAL ELEMENTS */
 .mobile-toggle {
 position: absolute;

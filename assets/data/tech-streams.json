@@ -1,65 +1,9 @@
 [
   {
-    "title": "Streamer.bot Tutorial",
-    "video": "1yLIqGDmxyw",
-    "date": "2026-01-07",
-    "description": "An introduction to Streamer.bot, covering core functionality and progressing into building custom automation workflows for stream management.",
-    "tech": [
-      {
-        "name": "Streamer.bot",
-        "link": "https://streamer.bot/"
-      },
-      {
-        "name": "OBS",
-        "link": "https://obsproject.com/"
-      }
-    ]
-  },
-  {
-    "title": "3D Modeling Part 1",
-    "video": "9o4VtkomJBU",
-    "date": "2026-02-04",
-    "description": "Part one of a two-part series focused on designing a custom riser station for the Bambu Lab A1 using Fusion 360.",
-    "tech": [
-      {
-        "name": "Fusion360",
-        "link": "https://www.autodesk.com/products/fusion-360/"
-      }
-    ]
-  },
-  {
-    "title": "3D Modeling Part 2",
-    "video": "ps9tfXObnTk",
-    "date": "2026-03-04",
-    "description": "Continuation of the riser station project, refining the design and preparing the model for practical use and production.",
-    "tech": [
-      {
-        "name": "Fusion360",
-        "link": "https://www.autodesk.com/products/fusion-360/"
-      }
-    ]
-  },
-  {
-    "title": "Website Build Part 1",
-    "video": "OV_wRxhWegM",
-    "date": "2026-04-01",
-    "description": "Kickoff of a four-part series building a custom streaming website, including project setup, structure, and initial development workflow.",
-    "tech": [
-      {
-        "name": "VS Code",
-        "link": "https://code.visualstudio.com/"
-      },
-      {
-        "name": "Github",
-        "link": "https://github.com/"
-      }
-    ]
-  },
-  {
-    "title": "Website Build Part 2",
-    "video": "dwVPQHqyf38",
-    "date": "2026-04-08",
-    "description": "Expansion of the website build, focusing on layout development, styling, and refining the user interface.",
+    "title": "Website Build Part 4",
+    "video": "GqyhJV3vuJM",
+    "date": "2026-04-22",
+    "description": "Finalization of the website, including optimization, feature completion, and preparing the project for deployment.",
     "tech": [
       {
         "name": "VS Code",
@@ -88,10 +32,10 @@
     ]
   },
   {
-    "title": "Website Build Part 4",
-    "video": "GqyhJV3vuJM",
-    "date": "2026-04-22",
-    "description": "Finalization of the website, including optimization, feature completion, and preparing the project for deployment.",
+    "title": "Website Build Part 2",
+    "video": "dwVPQHqyf38",
+    "date": "2026-04-08",
+    "description": "Expansion of the website build, focusing on layout development, styling, and refining the user interface.",
     "tech": [
       {
         "name": "VS Code",
@@ -100,6 +44,62 @@
       {
         "name": "Github",
         "link": "https://github.com/"
+      }
+    ]
+  },
+  {
+    "title": "Website Build Part 1",
+    "video": "OV_wRxhWegM",
+    "date": "2026-04-01",
+    "description": "Kickoff of a four-part series building a custom streaming website, including project setup, structure, and initial development workflow.",
+    "tech": [
+      {
+        "name": "VS Code",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/"
+      }
+    ]
+  },
+  {
+    "title": "3D Modeling Part 2",
+    "video": "ps9tfXObnTk",
+    "date": "2026-03-04",
+    "description": "Continuation of the riser station project, refining the design and preparing the model for practical use and production.",
+    "tech": [
+      {
+        "name": "Fusion360",
+        "link": "https://www.autodesk.com/products/fusion-360/"
+      }
+    ]
+  },
+  {
+    "title": "3D Modeling Part 1",
+    "video": "9o4VtkomJBU",
+    "date": "2026-02-04",
+    "description": "Part one of a two-part series focused on designing a custom riser station for the Bambu Lab A1 using Fusion 360.",
+    "tech": [
+      {
+        "name": "Fusion360",
+        "link": "https://www.autodesk.com/products/fusion-360/"
+      }
+    ]
+  },
+  {
+    "title": "Streamer.bot Tutorial",
+    "video": "1yLIqGDmxyw",
+    "date": "2026-01-07",
+    "description": "An introduction to Streamer.bot, covering core functionality and progressing into building custom automation workflows for stream management.",
+    "tech": [
+      {
+        "name": "Streamer.bot",
+        "link": "https://streamer.bot/"
+      },
+      {
+        "name": "OBS",
+        "link": "https://obsproject.com/"
       }
     ]
   }

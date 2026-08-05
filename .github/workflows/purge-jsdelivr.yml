@@ -15,21 +15,40 @@ jobs:
   purge:
     name: Purge Cached JSON Files
     runs-on: ubuntu-latest
-
     steps:
-      - name: Purge jsDelivr cache
-        run: |
-          FILES=(
-            "assets/data/synara-updates.json"
-            "assets/data/tech-streams.json"
-          )
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
-          for file in "${FILES[@]}"; do
+      - name: Purge Changed JSON Files
+        shell: bash
+        run: |
+
+          echo "Locating modified JSON files..."
+
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD -- 'assets/data/**/*.json')
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No JSON files changed."
+            exit 0
+          fi
+
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+          echo ""
+
+          while IFS= read -r file; do
+
             url="https://purge.jsdelivr.net/gh/Tango-Hunter/twitch@main/$file"
 
-            echo "Purging $url"
+            echo "Purging:"
+            echo "$url"
+
             curl --silent --show-error --fail "$url" || true
+
             echo ""
-          done
+
+          done <<< "$CHANGED_FILES"
 
           echo "Finished purging jsDelivr cache."

@@ -1,0 +1,841 @@
+/******************************************************************************
+ *
+ * File: content-manager.css
+ * Author: Tango Hunter
+ *
+ * Description:
+ * Shared stylesheet for the JSON Content Manager.
+ *
+ ******************************************************************************/
+
+/*==============================================================================
+    GLOBAL
+==============================================================================*/
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:30px;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:#eee;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+
+/*==============================================================================
+    PAGE HEADER
+==============================================================================*/
+
+.page-header{
+    margin-bottom:40px;
+}
+
+.page-header h1{
+    margin:0 0 10px;
+    font-size:2rem;
+    color:#fff;
+}
+
+.page-description{
+    margin:0;
+    color:#bbb;
+    line-height:1.6;
+}
+
+
+/*==============================================================================
+    SECTIONS
+==============================================================================*/
+
+section{
+
+    background:#1a1a1a;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==============================================================================
+    APPLICATION SELECTOR
+==============================================================================*/
+
+.application-selector h2{
+
+    margin-top:0;
+
+}
+
+.application-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.application-btn{
+
+    flex:1;
+
+    min-width:220px;
+
+    padding:16px;
+
+    background:#222;
+
+    border:2px solid transparent;
+
+    border-radius:8px;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+.application-btn:hover{
+
+    border-color:#4caf50;
+
+    background:#252525;
+
+}
+
+.application-btn.active{
+
+    background:#2b2b2b;
+
+    border-color:#4caf50;
+
+    color:#4caf50;
+
+}
+
+
+/*==============================================================================
+    APPLICATION INFORMATION
+==============================================================================*/
+
+.application-info h2{
+
+    margin:0 0 10px;
+
+}
+
+.application-info p{
+
+    margin:0;
+
+    color:#bbb;
+
+    line-height:1.6;
+
+}
+
+
+/*==============================================================================
+    FILE SELECTION
+==============================================================================*/
+
+.file-status{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+#selectedFile{
+
+    flex:1;
+
+    color:#bbb;
+
+    font-family:monospace;
+
+}
+
+
+/*==============================================================================
+    FORM
+==============================================================================*/
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#ddd;
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#2a2a2a;
+
+    color:#eee;
+
+    font-family:inherit;
+
+    font-size:.95rem;
+
+    box-sizing:border-box;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:2px solid #4caf50;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+/*==============================================================================
+    SELECT
+==============================================================================*/
+
+select{
+
+    cursor:pointer;
+
+}
+
+select option{
+
+    background:#2a2a2a;
+
+    color:#eee;
+
+}
+
+
+/*==============================================================================
+    FIELD WIDTHS
+==============================================================================*/
+
+.field-short{
+
+    max-width:300px;
+
+}
+
+.field-medium{
+
+    max-width:500px;
+
+}
+
+.field-long{
+
+    width:100%;
+
+}
+
+.field-large{
+
+    width:100%;
+
+}
+
+.field-large textarea,
+textarea.field-large{
+
+    min-height:120px;
+
+}
+
+
+/*==============================================================================
+    ARRAY FIELDS
+==============================================================================*/
+
+.field-array{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.field-array h3{
+
+    margin:0;
+
+}
+
+.array-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-bottom:12px;
+
+}
+
+.array-row:last-child{
+
+    margin-bottom:0;
+
+}
+
+.array-row input{
+
+    flex:1;
+
+}
+
+.array-row textarea{
+
+    flex:1;
+
+    min-height:90px;
+
+    margin-bottom:0;
+
+}
+
+.field-array > div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+/*==============================================================================
+    BUTTONS
+==============================================================================*/
+
+button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#4caf50;
+
+    color:#fff;
+
+    font-size:.95rem;
+
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        filter .2s ease,
+        transform .15s ease;
+
+}
+
+button:hover{
+
+    filter:brightness(110%);
+
+}
+
+button:active{
+
+    transform:translateY(1px);
+
+}
+
+button:disabled{
+
+    background:#555;
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+/*------------------------------------------------------------------------------
+    Generic Button Classes
+------------------------------------------------------------------------------*/
+
+.btn-add{
+
+    align-self:flex-start;
+
+}
+
+.btn-remove{
+
+    width:45px;
+
+    min-width:45px;
+
+    height:45px;
+
+    flex-shrink:0;
+
+    background:#e53935;
+
+}
+
+.danger{
+
+    background:#e53935;
+
+}
+
+.secondary{
+
+    background:#555;
+
+}
+
+
+/*==============================================================================
+    JSON PREVIEW
+==============================================================================*/
+
+#output{
+
+    margin:0;
+
+    padding:20px;
+
+    background:#0d0d0d;
+
+    border-radius:8px;
+
+    white-space:pre-wrap;
+
+    overflow-x:auto;
+
+    font-family:Consolas, monospace;
+
+    line-height:1.5;
+
+}
+
+
+/*==============================================================================
+    ACTION BUTTONS
+==============================================================================*/
+
+.file-controls{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+/*==============================================================================
+    STATUS TOAST
+==============================================================================*/
+
+.status{
+
+    position:fixed;
+
+    top:30px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(-20px);
+
+    min-width:350px;
+
+    max-width:700px;
+
+    padding:14px 22px;
+
+    border-radius:8px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:#fff;
+
+    z-index:5000;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+.status.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+.status.fade-out{
+
+    opacity:0;
+
+    transform:translateX(-50%) translateY(-20px);
+
+}
+
+.success{
+
+    background:#2e7d32;
+
+}
+
+.warning{
+
+    background:#f9a825;
+
+    color:#111;
+
+}
+
+.error{
+
+    background:#c62828;
+
+}
+
+
+/*==============================================================================
+    FILE PREVIEW
+==============================================================================*/
+
+.preview-section{
+
+    margin-top:40px;
+
+}
+
+.placeholder{
+
+    text-align:center;
+
+    color:#888;
+
+    font-style:italic;
+
+}
+
+.entry{
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    background:#222;
+
+    border:2px solid transparent;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+.entry:hover{
+
+    background:#292929;
+
+}
+
+.entry.selected{
+
+    border-color:#4caf50;
+
+}
+
+.entry strong{
+
+    color:#fff;
+
+}
+
+
+/*==============================================================================
+    EDIT BADGE
+==============================================================================*/
+
+.edit-badge{
+
+    margin-bottom:20px;
+
+    padding:8px;
+
+    text-align:center;
+
+    border-radius:6px;
+
+    background:#ff9800;
+
+    color:#000;
+
+    font-weight:bold;
+
+}
+
+
+/*==============================================================================
+    SCROLL BUTTON
+==============================================================================*/
+
+.scroll-btn{
+
+    display:block;
+
+    width:200px;
+
+    margin:25px auto;
+
+    padding:12px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#2196f3;
+
+    color:#fff;
+
+    border-radius:6px;
+
+    transition:.2s ease;
+
+}
+
+.scroll-btn:hover{
+
+    filter:brightness(110%);
+
+}
+
+
+/*==============================================================================
+    MODAL
+==============================================================================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:1000;
+
+}
+
+.modal-content{
+
+    width:850px;
+
+    max-width:95%;
+
+    max-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#1a1a1a;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    overflow:hidden;
+
+}
+
+.modal-content h3{
+
+    margin-top:0;
+
+}
+
+.modal-content pre{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding:15px;
+
+    background:#000;
+
+    border-radius:6px;
+
+    white-space:pre-wrap;
+
+    font-family:Consolas, monospace;
+
+}
+
+.modal-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+/*==============================================================================
+    UTILITIES
+==============================================================================*/
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/*==============================================================================
+    RESPONSIVE
+==============================================================================*/
+
+@media (max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .application-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .application-btn{
+
+        width:100%;
+
+    }
+
+    .file-status{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .array-row{
+
+        flex-direction:column;
+
+    }
+
+    .btn-remove{
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .file-controls{
+
+        flex-direction:column;
+
+    }
+
+    .modal-content{
+
+        width:100%;
+
+    }
+
+}

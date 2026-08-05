@@ -6,27 +6,6 @@ Description: Style Sheet for the SYNARA Profile
 */
 
 
-/* PAGE HEADER */
-
-.synara-header{
-
-    background-image: url("../assets/images/SYNARA-banner.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    aspect-ratio: auto;
-    min-height: 300px;
-    border: 2px solid #00C853;
-    border-radius: 15px; 
-}
-
-h1 {
-    position: absolute;
-    left: 1rem;
-    top: 2rem;
-}
-
-
 /* INTRO */
 
 .intro{

@@ -1,0 +1,232 @@
+<!--
+Name: content-manager.html
+Author: Tango Hunter
+Date Created: 8/3/26
+Description: Content Manager for each JSON file in "assets/data/".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tango Hunter | JSON Editor</title>
+    <link rel="stylesheet" href="styles/content-manager.css">
+  </head>
+
+  <body>
+
+    <div id="top"></div>
+
+    <div class="container">
+
+      <!-- ==========================================
+            PAGE HEADER
+      =========================================== -->
+
+      <header class="page-header">
+
+        <h1>Content Manager</h1>
+
+        <p class="page-description">
+          Manage the JSON content used throughout the Tango Hunter website.
+          Select a content type to begin editing.
+        </p>
+
+      </header>
+
+
+      <!-- ==========================================
+            APPLICATION SELECTOR
+      =========================================== -->
+
+      <section class="application-selector">
+
+        <h2>Content Type</h2>
+
+        <div id="applicationButtons" class="application-buttons">
+
+          <button class="application-btn" data-schema="tech">
+            💻 Tech Streams
+          </button>
+
+          <button class="application-btn" data-schema="updates">
+            🤖 SYNARA Updates
+          </button>
+
+          <button class="application-btn" data-schema="features">
+            ⭐ SYNARA Features
+          </button>
+
+          <button class="application-btn" data-schema="commands">
+            ⌨️ SYNARA Commands
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+            ACTIVE APPLICATION
+      =========================================== -->
+
+      <section id="applicationInfo" class="application-info hidden">
+
+        <h2 id="applicationTitle"></h2>
+
+        <p id="applicationDescription"></p>
+
+      </section>
+
+
+      <!-- ==========================================
+            JSON FILE
+      =========================================== -->
+
+      <section id="fileSection" class="file-section hidden">
+
+        <h2>JSON File</h2>
+
+        <div class="file-status">
+
+          <span id="selectedFile">
+            No file selected.
+          </span>
+
+          <button id="selectFileBtn">
+            Select JSON File...
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+            EDITOR
+      =========================================== -->
+
+      <section id="editorSection" class="hidden">
+
+        <div id="editBadge" class="edit-badge hidden">
+          Editing Existing Entry
+        </div>
+
+        <form id="json-form"></form>
+
+      </section>
+
+
+      <!-- ==========================================
+            CURRENT ENTRY
+      =========================================== -->
+
+      <section id="previewSection" class="hidden">
+
+        <h2>Current Entry</h2>
+
+        <pre id="output">{}</pre>
+
+      </section>
+
+
+      <!-- ==========================================
+            ACTIONS
+      =========================================== -->
+
+      <section id="actionSection" class="hidden">
+
+        <div class="file-controls">
+
+          <button id="saveBtn">
+              Save Entry
+          </button>
+
+          <button id="deleteBtn" class="danger">
+            Delete Entry
+          </button>
+
+          <button id="clearBtn" class="secondary">
+            Clear Form
+          </button>
+
+        </div>
+
+        <div id="status" class="status"></div>
+
+      </section>
+
+
+      <!-- ==========================================
+            JSDELVR PURGE TOOL
+      =========================================== -->
+
+      <section id="purgeSection" class="hidden">
+        
+      </section>
+
+
+      <!-- ==========================================
+            FILE CONTENTS
+      =========================================== -->
+
+      <section id="filePreview" class="preview-section hidden">
+
+        <a href="#top" class="scroll-btn">
+          ↑ Back to Top
+        </a>
+
+        <h2>Current Entries</h2>
+
+        <div id="fileOutput">
+
+          <p class="placeholder">
+            Select a content type and JSON file to begin.
+          </p>
+
+        </div>
+
+        <a href="#top" class="scroll-btn">
+          ↑ Back to Top
+        </a>
+
+      </section>
+
+    </div>
+
+
+    <!-- ==========================================
+         CONFIRM MODAL
+    =========================================== -->
+
+    <div id="confirmModal" class="modal">
+
+      <div class="modal-content">
+
+        <h3>Confirm Changes</h3>
+
+        <pre id="confirmJSON"></pre>
+
+        <div class="modal-actions">
+
+          <button id="confirmBtn">
+            Confirm
+          </button>
+
+          <button id="cancelBtn" class="danger">
+            Cancel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="scripts/schemas.js"></script>
+    <script src="scripts/content-manager.js"></script>
+
+  </body>
+</html>
