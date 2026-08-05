@@ -752,7 +752,7 @@ const SCHEMAS = Object.freeze({
         template: [
 
             {
-                id: "command",
+                id: "name",
 
                 label: "Command",
 
