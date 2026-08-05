@@ -886,7 +886,7 @@ const SCHEMAS = Object.freeze({
             fields:  [
 
                 {
-                    id: "command",
+                    id: "name",
 
                     element: "h3",
 
