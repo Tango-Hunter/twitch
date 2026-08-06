@@ -792,15 +792,19 @@ const SCHEMAS = Object.freeze({
                 options: [
 
                     {
-                        value: "Administrative Command - Commands intended for server administrators and moderators.",
+                        value: "Administrative Command",
 
-                        label: "Administrative Command"
+                        label: "Administrative Command",
+
+                        description: "Commands intended for server administrators and moderators.",
                     },
 
                     {
-                        value: "Community Command - Commands available to all community members.",
+                        value: "Community Command",
 
-                        label: "Community Command"
+                        label: "Community Command",
+
+                        description: "Commands available to all community members.",
                     }
 
                 ]

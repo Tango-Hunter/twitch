@@ -995,9 +995,17 @@ function renderBadge(
     isCard = false
 ) {
 
-    const wrapper = document.createElement("div");
+    const wrapper =
+        document.createElement("div");
 
-    const badge = document.createElement("div");
+    wrapper.className = "badge-wrapper";
+
+    //----------------------------------------------------------
+    // Badge
+    //----------------------------------------------------------
+
+    const badge =
+        document.createElement("div");
 
     badge.className = field.class;
 
@@ -1016,21 +1024,25 @@ function renderBadge(
     }
 
     //----------------------------------------------------------
-    // Look up description from schema
+    // Modal description
     //----------------------------------------------------------
 
-    const option = APP.schema.template
-        .find(item => item.id === field.id)
-        ?.options
-        ?.find(option => option.value === value);
+    const option =
+        APP.schema.template
+            .find(item => item.id === field.id)
+            ?.options
+            ?.find(option => option.value === value);
 
     if (option?.description) {
 
-        const description = document.createElement("p");
+        const description =
+            document.createElement("p");
 
-        description.className = "content-category-description";
+        description.className =
+            "content-category-description";
 
-        description.textContent = option.description;
+        description.textContent =
+            option.description;
 
         wrapper.appendChild(description);
 
