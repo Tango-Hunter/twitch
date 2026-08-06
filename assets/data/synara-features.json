@@ -6,7 +6,7 @@
     "notes": "Nicknames are shared across every server where both you and SYNARA are present.\nRunning the command again replaces the existing nickname.\nRunning the command without a nickname removes the saved nickname.\nNicknames should remain appropriate for all audiences.\nSYNARA may reject nicknames that violate community standards.",
     "commands": [
       {
-        "name": "!nickname <nickname>",
+        "name": "!nickname [New Nickname]",
         "description": "Sets or updates your preferred nickname."
       },
       {
@@ -22,7 +22,7 @@
     "notes": "Be as descriptive as possible for the best results.\nOccasionally SYNARA may experience a harmless drawing glitch that intentionally adds personality to the feature.\nExperiment with different ideas and prompts for unique results.",
     "commands": [
       {
-        "name": "!draw <description>",
+        "name": "!draw [description]",
         "description": "Generates a sketch based on your prompt."
       }
     ]
@@ -133,7 +133,7 @@
     "requiredSettings": "Leadership Stream Channel\nSelf Promotion Channel",
     "commands": [
       {
-        "name": "!linkTwitch <twitch_username>",
+        "name": "!linkTwitch [twitch_username]",
         "description": "Links your Twitch account to SYNARA."
       },
       {

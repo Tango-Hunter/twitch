@@ -269,7 +269,7 @@ main h2{
 
 .content-description{
 
-    margin-bottom:1rem;
+    margin-bottom:0;
 
     color:var(--text-secondary);
 
@@ -411,7 +411,7 @@ main h2{
 
     flex-direction:column;
 
-    gap:2rem;
+    gap:1rem;
 
 }
 
@@ -529,7 +529,7 @@ main h2{
 
 .modal-layout > *{
 
-    margin-bottom:.5rem;
+    margin-bottom:0;
 
 }
 
@@ -663,6 +663,20 @@ main h2{
     LISTS
 ==============================================================================*/
 
+.list-heading{
+
+    margin:0 0 1rem;
+
+    color:var(--accent-main);
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    text-align:left;
+
+}
+
 .list-item{
 
     padding:1rem;
@@ -689,11 +703,25 @@ main h2{
 
     padding:0;
 
+    text-align:left;
+
 }
 
 .list-item strong{
 
     color:var(--accent-secondary);
+
+}
+
+.notes .list-item{
+
+    text-align:left;
+
+}
+
+.notes .list-item p{
+
+    text-align:left;
 
 }
 

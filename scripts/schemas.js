@@ -431,6 +431,8 @@ const SCHEMAS = Object.freeze({
                 {
                     id: "notes",
 
+                    label: "Release Notes",
+
                     element: "list",
 
                     class: "notes",
@@ -495,28 +497,33 @@ const SCHEMAS = Object.freeze({
                 options: [
 
                     {
-                        value: "Community - Features that build community interaction.",
-                        label: "Community"
+                        value: "Community",
+                        label: "Community",
+                        description: "Features that build community interaction.",
                     },
 
                     {
-                        value: "Engagement - Features that encourage conversation and participation.",
-                        label: "Engagement"
+                        value: "Engagement",
+                        label: "Engagement",
+                        description: "Features that encourage conversation and participation.",
                     },
 
                     {
-                        value: "Administration - Administrative tools and moderation features.",
-                        label: "Administration"
+                        value: "Administration",
+                        label: "Administration",
+                        description: "Administrative tools and moderation features.",
                     },
 
                     {
-                        value: "Automation - Background systems that operate automatically.",
-                        label: "Automation"
+                        value: "Automation",
+                        label: "Automation",
+                        description: "Background systems that operate automatically.",
                     },
 
                     {
-                        value: "Informational - Documentation, guides, and informational content.",
-                        label: "Information"
+                        value: "Informational",
+                        label: "Informational",
+                        description: "Documentation, guides, and informational content.",
                     }
 
                 ]
@@ -717,6 +724,8 @@ const SCHEMAS = Object.freeze({
 
                 {
                     id: "commands",
+
+                    label: "Commands",
 
                     element: "list",
 
@@ -932,6 +941,8 @@ const SCHEMAS = Object.freeze({
 
                 {
                     id: "subOptions",
+
+                    label: "Sub-Options",
 
                     element: "list",
 

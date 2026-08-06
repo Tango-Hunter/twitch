@@ -206,6 +206,8 @@ function buildControls() {
 
     buildFilterMenu();
 
+    buildSortMenu();
+
     updateControlVisibility();
 
 }
@@ -332,6 +334,72 @@ function buildFilterMenu() {
 }
 
 /*==============================================================================
+    SORT MENU
+==============================================================================*/
+
+function buildSortMenu() {
+
+    DOM.sortMenu.innerHTML = "";
+
+    if (!APP.schema.display.sortBy) {
+
+        return;
+
+    }
+
+    let options = [];
+
+    if (APP.schema.display.sortBy === "date") {
+
+        options = [
+
+            {
+                label: "Newest → Oldest",
+                value: "newest"
+            },
+
+            {
+                label: "Oldest → Newest",
+                value: "oldest"
+            }
+
+        ];
+
+    }
+
+    else if (APP.schema.display.sortBy === "alpha") {
+
+        options = [
+
+            {
+                label: "A → Z",
+                value: "az"
+            },
+
+            {
+                label: "Z → A",
+                value: "za"
+            }
+
+        ];
+
+    }
+
+    options.forEach(option => {
+
+        const item = document.createElement("div");
+
+        item.dataset.sort = option.value;
+
+        item.textContent = option.label;
+
+        DOM.sortMenu.appendChild(item);
+
+    });
+
+}
+
+/*==============================================================================
     CONTROL VISIBILITY
 ==============================================================================*/
 
@@ -373,7 +441,7 @@ function hasFilters() {
 
 function hasSortOptions() {
 
-    return APP.schema.id !== "updates";
+    return Boolean(APP.schema.display.sortBy);
 
 }
 
@@ -811,7 +879,8 @@ function renderField(
         case "badge":
             return renderBadge(
                 value,
-                field
+                field,
+                isCard
             );
 
         case "thumbnail":
@@ -922,18 +991,52 @@ function renderDate(
 
 function renderBadge(
     value,
-    field
+    field,
+    isCard = false
 ) {
 
-    const badge =
-        document.createElement("div");
+    const wrapper = document.createElement("div");
 
-    badge.className =
-        field.class;
+    const badge = document.createElement("div");
+
+    badge.className = field.class;
 
     badge.textContent = value;
 
-    return badge;
+    wrapper.appendChild(badge);
+
+    //----------------------------------------------------------
+    // Cards only display the badge
+    //----------------------------------------------------------
+
+    if (isCard) {
+
+        return wrapper;
+
+    }
+
+    //----------------------------------------------------------
+    // Look up description from schema
+    //----------------------------------------------------------
+
+    const option = APP.schema.template
+        .find(item => item.id === field.id)
+        ?.options
+        ?.find(option => option.value === value);
+
+    if (option?.description) {
+
+        const description = document.createElement("p");
+
+        description.className = "content-category-description";
+
+        description.textContent = option.description;
+
+        wrapper.appendChild(description);
+
+    }
+
+    return wrapper;
 
 }
 
@@ -1043,38 +1146,49 @@ function renderList(
     const container =
         document.createElement("div");
 
-    container.className =
-        field.class;
+    container.className = field.class;
+
+    //----------------------------------------------------------
+    // Heading
+    //----------------------------------------------------------
+
+    const heading =
+        document.createElement("h4");
+
+    heading.className = "list-heading";
+
+    heading.textContent = field.label;
+
+    container.appendChild(heading);
+
+    //----------------------------------------------------------
+    // Items
+    //----------------------------------------------------------
 
     items.forEach(item => {
 
         const row =
             document.createElement("div");
 
-        row.className =
-            "list-item";
+        row.className = "list-item";
 
         //------------------------------------------------------
         // Object
         //------------------------------------------------------
 
-        if (
-            typeof item === "object"
-        ) {
+        if (typeof item === "object") {
 
-            Object.entries(item)
-                .forEach(([key, value]) => {
+            Object.entries(item).forEach(([key, value]) => {
 
-                    const paragraph =
-                        document.createElement("p");
+                const paragraph =
+                    document.createElement("p");
 
-                    paragraph.innerHTML =
+                paragraph.innerHTML =
+                    `<strong>${capitalize(key)}:</strong> ${value}`;
 
-                        `<strong>${capitalize(key)}:</strong> ${value}`;
+                row.appendChild(paragraph);
 
-                    row.appendChild(paragraph);
-
-                });
+            });
 
         }
 
