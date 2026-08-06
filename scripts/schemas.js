@@ -160,6 +160,8 @@ const SCHEMAS = Object.freeze({
 
             },
 
+            sortBy: "date",
+
             fields: [
 
                 {
@@ -640,7 +642,9 @@ const SCHEMAS = Object.freeze({
 
                 title: "Category"
 
-            },        
+            },
+
+            sortBy: "alpha",
 
             layout: "standard",
             
@@ -879,7 +883,9 @@ const SCHEMAS = Object.freeze({
 
                 title: "Category"
 
-            },        
+            },
+
+            sortBy: "alpha",
 
             layout: "standard",
             
