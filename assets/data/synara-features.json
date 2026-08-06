@@ -1,7 +1,7 @@
 [
   {
     "name": "Nicknames",
-    "category": "Community - Features that build community interaction.",
+    "category": "Community",
     "purpose": "Allows members to choose how SYNARA addresses them during conversations.",
     "notes": "Nicknames are shared across every server where both you and SYNARA are present.\nRunning the command again replaces the existing nickname.\nRunning the command without a nickname removes the saved nickname.\nNicknames should remain appropriate for all audiences.\nSYNARA may reject nicknames that violate community standards.",
     "commands": [
@@ -17,7 +17,7 @@
   },
   {
     "name": "Draw",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Allows members to collaborate with SYNARA by generating simple sketches based on their ideas, encouraging creativity and experimentation within the community.",
     "notes": "Be as descriptive as possible for the best results.\nOccasionally SYNARA may experience a harmless drawing glitch that intentionally adds personality to the feature.\nExperiment with different ideas and prompts for unique results.",
     "commands": [
@@ -29,7 +29,7 @@
   },
   {
     "name": "Birthdays",
-    "category": "Community - Features that build community interaction.",
+    "category": "Community",
     "purpose": "Helps celebrate members of your community by remembering their birthday and automatically announcing it each year, creating a more welcoming and engaging server.",
     "notes": "Birthdays are entered using the MM/DD format.\nA birth year is never requested or stored.\nRunning !birthday again replaces the previously saved birthday.\nThe Happy Birthday role is optional and only assigned if configured by the server.\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Birthday Channel\nHappy Birthday Role",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Sticky Messages",
-    "category": "Administration - Administrative tools and moderation features.",
+    "category": "Administration",
     "purpose": "Keeps important information visible by automatically moving a designated message back to the bottom of a channel after conversations have slowed down.",
     "notes": "Only one sticky message may exist per channel.\nSticky messages remain in the channel where they were created.\nThe five-minute delay prevents unnecessary reposting during active conversations.\nSticky messages are ideal for instructions, server information, and frequently referenced content.",
     "commands": [
@@ -62,7 +62,7 @@
   },
   {
     "name": "Custom Embeds",
-    "category": "Administration - Administrative tools and moderation features.",
+    "category": "Administration",
     "purpose": "Allows administrators to create professional-looking announcements and informational messages that appear as though they were posted directly by SYNARA.",
     "notes": "Embeds are posted in the same channel where the command is used.\nEvery embed includes a private approval step before being published.\nCancelling the preview prevents the embed from being posted.",
     "commands": [
@@ -74,13 +74,13 @@
   },
   {
     "name": "Event Announcements",
-    "category": "Automation - Background systems that operate automatically.",
+    "category": "Automation",
     "purpose": "Automatically informs your community whenever a new Discord Event is created, helping members stay informed about upcoming activities without requiring administrators to manually post announcements.",
     "notes": "SYNARA automatically announces newly created Discord Events.\nMembers with the configured Verified role are notified of new events.\nIf an event begins within 30 minutes of being created, SYNARA skips the creation announcement and only posts the \"Event Starting Now\" announcement.\nEvent announcements are generated automatically whenever a Discord Event is created."
   },
   {
     "name": "Scheduled Events",
-    "category": "Administration - Administrative tools and moderation features.",
+    "category": "Administration",
     "purpose": "Allows administrators to create recurring or one-time announcements that SYNARA automatically posts on a configurable schedule.",
     "notes": "Scheduled events currently use UTC (UTC+0) when selecting dates and times.\nRecurring events continue automatically until paused or deleted.\nOne-time events are automatically removed after they have been posted.\nThis feature may be enabled or disabled by administrators.",
     "commands": [
@@ -96,14 +96,14 @@
   },
   {
     "name": "Counting Penalties",
-    "category": "Automation - Background systems that operate automatically.",
+    "category": "Automation",
     "purpose": "Automatically tracks counting game failures and assigns a temporary Counting Penalty role to the member responsible for the most recent reset.",
     "notes": "SYNARA does not control the counting game itself.\nA separate counting bot validates numbers.\nOnly one member can have the Counting Penalty role at a time.\nThe role automatically moves to the next member who breaks the counting sequence.\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Counting Channel\nCounting Penalty Role\nCounting Bot"
   },
   {
     "name": "Bonks",
-    "category": "Community - Features that build community interaction.",
+    "category": "Community",
     "purpose": "Provides a lighthearted community game where members can playfully bonk one another while SYNARA tracks each member's bonk count.",
     "notes": "Bonks are intended to be fun and playful.\nRare self-bonks are completely random.\nSYNARA tracks each member's total number of bonks.\nBonks have no moderation effects and do not punish users.\nThis feature may be enabled or disabled by administrators.",
     "commands": [
@@ -115,7 +115,7 @@
   },
   {
     "name": "Efficiency Points",
-    "category": "Community - Features that build community interaction.",
+    "category": "Community",
     "purpose": "Provides a fun virtual currency system that lets members compare their progress and activity within the community.",
     "notes": "Efficiency Points have no monetary value.\nThe system exists purely for community engagement and friendly competition.\nMembers can compare their progress as they participate in the community.",
     "commands": [
@@ -127,7 +127,7 @@
   },
   {
     "name": "Twitch Monitoring",
-    "category": "Automation - Background systems that operate automatically.",
+    "category": "Automation",
     "purpose": "Automatically monitors linked Twitch accounts and announces live streams from active community members while providing additional visibility for leadership streams.",
     "notes": "Twitch usernames must be entered exactly as they appear on Twitch.\nLive announcements are intended to support active community members rather than function as a live-link directory.\nServer Leader streams receive additional visibility through automatic Discord Event creation.\nMembers may unlink and relink their Twitch account at any time.\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Leadership Stream Channel\nSelf Promotion Channel",
@@ -152,14 +152,14 @@
   },
   {
     "name": "Onboarding",
-    "category": "Automation - Background systems that operate automatically.",
+    "category": "Automation",
     "purpose": "Welcomes new members by guiding them through verification and directing them to important channels needed to get started in the community.",
     "notes": "The Verified role must be configured by the server administrators.\nSYNARA will only assign the configured Verified role.\nThe Roles and Introductions channels should be configured before enabling this feature.\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Welcome Channel\nRoles Channel\nIntroductions Channel"
   },
   {
     "name": "Observations",
-    "category": "Automation - Background systems that operate automatically.",
+    "category": "Automation",
     "purpose": "Allows SYNARA to naturally participate in conversations by selectively responding when she can meaningfully contribute to discussions.",
     "notes": "SYNARA only monitors channels that are not on the ignored channel list.\nShe intentionally avoids responding to low-information messages, acknowledgements, emotes, GIFs, and similar content.\nObservations are designed to enhance conversations rather than dominate them.\nThis feature may be enabled or disabled by administrators.",
     "commands": [
@@ -179,7 +179,7 @@
   },
   {
     "name": "Moderator Applications",
-    "category": "Administration - Administrative tools and moderation features.",
+    "category": "Administration",
     "purpose": "Provides a structured and private application system that allows members to apply for moderator positions while giving administrators complete control over the review process.",
     "notes": "Applications contain fifteen questions divided into three sections.\nSubmitted applications remain private and are only visible to server administrators.\nPrevious moderators are not eligible to reapply.\nBlacklisted users cannot submit moderator applications.\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Moderator Application Channel\nModerator Submission Channel",
@@ -208,21 +208,21 @@
   },
   {
     "name": "Question of the Day",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Automatically posts a thought-provoking question each morning to encourage meaningful discussion and participation throughout the community.",
     "notes": "Questions are intended to encourage meaningful discussion rather than simple yes-or-no answers.\nSYNARA includes her own commentary with each question to help begin the conversation.\nPosting time is based on Eastern Time (8:00 AM) and UTC (12:00 PM).\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Question of the Day Channel"
   },
   {
     "name": "Nightly Motivational",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Automatically posts a motivational quote and SYNARA's reflection each evening to inspire discussion, self-reflection, and positive community interaction.",
     "notes": "Quotes and reflections are generated automatically.\nThe feature is intended to encourage positive discussion within the community.\nPosting time is based on Eastern Time (8:00 PM) and UTC (12:00 AM).\nThis feature may be enabled or disabled by administrators.",
     "requiredSettings": "Motivational Channel"
   },
   {
     "name": "Trivia",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Challenges members with trivia questions across a variety of topics while tracking long-term performance and leaderboard rankings.",
     "notes": "Trivia statistics are tracked over time.\nLeaderboards encourage friendly competition within the community.\nEveryone has an opportunity to climb the rankings by continuing to participate.",
     "commands": [
@@ -238,7 +238,7 @@
   },
   {
     "name": "Jokes",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Gives members a lighthearted way to interact with SYNARA through original jokes and her own unique sense of humor.",
     "notes": "Humor is intended to be fun and community-friendly.\nSYNARA's commentary is part of the overall experience.",
     "commands": [
@@ -250,7 +250,7 @@
   },
   {
     "name": "Facts",
-    "category": "Engagement - Features that encourage conversation and participation.",
+    "category": "Engagement",
     "purpose": "Lets members discover interesting real-world facts while hearing SYNARA's own perspective on what makes each fact interesting.",
     "notes": "Facts cover a wide variety of subjects.\nSYNARA's commentary is intended to add personality to every response.",
     "commands": [
