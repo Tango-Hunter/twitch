@@ -218,40 +218,302 @@ function buildControls() {
 
 function buildContentSelector() {
 
-    DOM.contentSelect.innerHTML = "";
+    //----------------------------------------------------------
+    // Replace Native Select
+    //----------------------------------------------------------
+
+    const existing =
+        DOM.contentSelect;
+
+    let selector;
+
+    if (
+        existing &&
+        existing.tagName === "SELECT"
+    ) {
+
+        selector =
+            document.createElement("div");
+
+        selector.id =
+            "contentSelect";
+
+        selector.className =
+            "content-selector";
+
+        existing.replaceWith(selector);
+
+        DOM.contentSelect =
+            selector;
+
+    }
+
+    else {
+
+        selector =
+            existing;
+
+        selector.className =
+            "content-selector";
+
+        selector.innerHTML = "";
+
+    }
+
+    //----------------------------------------------------------
+    // Selector Button
+    //----------------------------------------------------------
+
+    const button =
+        document.createElement("button");
+
+    button.type =
+        "button";
+
+    button.className =
+        "content-selector-button";
+
+    button.setAttribute(
+        "aria-haspopup",
+        "listbox"
+    );
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    //----------------------------------------------------------
+    // Button Text
+    //----------------------------------------------------------
+
+    const buttonText =
+        document.createElement("span");
+
+    buttonText.className =
+        "content-selector-text";
+
+    buttonText.textContent =
+        APP.schema.selectorPlaceholder ??
+        "Jump To...";
+
+    //----------------------------------------------------------
+    // Arrow
+    //----------------------------------------------------------
+
+    const arrow =
+        document.createElement("span");
+
+    arrow.className =
+        "content-selector-arrow";
+
+    arrow.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    arrow.textContent = "⌄";
+
+    button.appendChild(
+        buttonText
+    );
+
+    button.appendChild(
+        arrow
+    );
+
+    //----------------------------------------------------------
+    // Menu
+    //----------------------------------------------------------
+
+    const menu =
+        document.createElement("div");
+
+    menu.className =
+        "content-selector-menu";
+
+    menu.setAttribute(
+        "role",
+        "listbox"
+    );
 
     //----------------------------------------------------------
     // Default Option
     //----------------------------------------------------------
 
     const defaultOption =
-        document.createElement("option");
+        document.createElement("button");
 
-    defaultOption.value = "";
+    defaultOption.type =
+        "button";
+
+    defaultOption.className =
+        "content-selector-option is-placeholder";
+
+    defaultOption.setAttribute(
+        "role",
+        "option"
+    );
 
     defaultOption.textContent =
         APP.schema.selectorPlaceholder ??
         "Jump To...";
 
-    DOM.contentSelect.appendChild(defaultOption);
+    defaultOption.addEventListener(
+        "click",
+        () => {
+
+            buttonText.textContent =
+                APP.schema.selectorPlaceholder ??
+                "Jump To...";
+
+            closeContentSelector();
+
+        }
+    );
+
+    menu.appendChild(
+        defaultOption
+    );
 
     //----------------------------------------------------------
-    // Items
+    // Content Items
     //----------------------------------------------------------
 
-    APP.data.forEach((item, index) => {
+    APP.data.forEach(
+        (item, index) => {
 
-        const option =
-            document.createElement("option");
+            const option =
+                document.createElement("button");
 
-        option.value = index;
+            option.type =
+                "button";
 
-        option.textContent =
-            getPrimaryHeading(item);
+            option.className =
+                "content-selector-option";
 
-        DOM.contentSelect.appendChild(option);
+            option.setAttribute(
+                "role",
+                "option"
+            );
 
-    });
+            option.dataset.index =
+                index;
+
+            option.textContent =
+                getPrimaryHeading(item);
+
+            option.addEventListener(
+                "click",
+                () => {
+
+                    buttonText.textContent =
+                        getPrimaryHeading(item);
+
+                    closeContentSelector();
+
+                    openModal(item);
+
+                }
+            );
+
+            menu.appendChild(
+                option
+            );
+
+        }
+    );
+
+    //----------------------------------------------------------
+    // Assemble Selector
+    //----------------------------------------------------------
+
+    selector.appendChild(
+        button
+    );
+
+    selector.appendChild(
+        menu
+    );
+
+    //----------------------------------------------------------
+    // Toggle
+    //----------------------------------------------------------
+
+    button.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            const isOpen =
+                selector.classList.contains(
+                    "open"
+                );
+
+            closeContentSelector();
+
+            if (!isOpen) {
+
+                selector.classList.add(
+                    "open"
+                );
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                const firstOption =
+                    menu.querySelector(
+                        ".content-selector-option"
+                    );
+
+                if (firstOption) {
+
+                    firstOption.focus();
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+/*==============================================================================
+    CONTENT SELECTOR HELPERS
+==============================================================================*/
+
+function closeContentSelector() {
+
+    const selector =
+        DOM.contentSelect;
+
+    if (!selector) {
+
+        return;
+
+    }
+
+    selector.classList.remove(
+        "open"
+    );
+
+    const button =
+        selector.querySelector(
+            ".content-selector-button"
+        );
+
+    if (button) {
+
+        button.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
 
 }
 
@@ -665,34 +927,6 @@ function renderGrid() {
 }
 
 /*==============================================================================
-    CONTENT SELECTOR
-==============================================================================*/
-
-DOM.contentSelect.addEventListener(
-
-    "change",
-
-    event => {
-
-        if (event.target.value === "") {
-
-            return;
-
-        }
-
-        openModal(
-
-            APP.data[
-                Number(event.target.value)
-            ]
-
-        );
-
-    }
-
-);
-
-/*==============================================================================
     SORT MENU
 ==============================================================================*/
 
@@ -758,6 +992,24 @@ document.addEventListener(
 
     event => {
 
+        //----------------------------------------------------------
+        // Content Selector
+        //----------------------------------------------------------
+
+        if (
+            event.target.closest(
+                ".content-selector"
+            )
+        ) {
+
+            return;
+
+        }
+
+        //----------------------------------------------------------
+        // Existing Filter / Sort Dropdowns
+        //----------------------------------------------------------
+
         if (
             event.target.closest(
                 ".icon-dropdown"
@@ -767,6 +1019,16 @@ document.addEventListener(
             return;
 
         }
+
+        //----------------------------------------------------------
+        // Close Content Selector
+        //----------------------------------------------------------
+
+        closeContentSelector();
+
+        //----------------------------------------------------------
+        // Close Filter / Sort Menus
+        //----------------------------------------------------------
 
         document
             .querySelectorAll(
@@ -780,6 +1042,180 @@ document.addEventListener(
                 )
 
             );
+
+    }
+
+);
+
+/*==============================================================================
+    CONTENT SELECTOR KEYBOARD SUPPORT
+==============================================================================*/
+
+document.addEventListener(
+
+    "keydown",
+
+    event => {
+
+        const selector =
+            DOM.contentSelect;
+
+        if (!selector) {
+
+            return;
+
+        }
+
+        const button =
+            selector.querySelector(
+                ".content-selector-button"
+            );
+
+        const menu =
+            selector.querySelector(
+                ".content-selector-menu"
+            );
+
+        if (!button || !menu) {
+
+            return;
+
+        }
+
+        //----------------------------------------------------------
+        // Open / Close
+        //----------------------------------------------------------
+
+        if (
+            event.key === "Enter" &&
+            document.activeElement === button
+        ) {
+
+            event.preventDefault();
+
+            button.click();
+
+            return;
+
+        }
+
+        if (
+            event.key === "Escape" &&
+            selector.classList.contains("open")
+        ) {
+
+            event.preventDefault();
+
+            closeContentSelector();
+
+            button.focus();
+
+            return;
+
+        }
+
+        //----------------------------------------------------------
+        // Ignore Navigation When Closed
+        //----------------------------------------------------------
+
+        if (
+            !selector.classList.contains("open")
+        ) {
+
+            return;
+
+        }
+
+        //----------------------------------------------------------
+        // Menu Options
+        //----------------------------------------------------------
+
+        const options = [
+
+            ...menu.querySelectorAll(
+                ".content-selector-option"
+            )
+
+        ];
+
+        if (!options.length) {
+
+            return;
+
+        }
+
+        const currentIndex =
+            options.indexOf(
+                document.activeElement
+            );
+
+        //----------------------------------------------------------
+        // Arrow Down
+        //----------------------------------------------------------
+
+        if (
+            event.key === "ArrowDown"
+        ) {
+
+            event.preventDefault();
+
+            const nextIndex =
+                currentIndex < options.length - 1
+                    ? currentIndex + 1
+                    : 0;
+
+            options[nextIndex].focus();
+
+        }
+
+        //----------------------------------------------------------
+        // Arrow Up
+        //----------------------------------------------------------
+
+        else if (
+            event.key === "ArrowUp"
+        ) {
+
+            event.preventDefault();
+
+            const previousIndex =
+                currentIndex > 0
+                    ? currentIndex - 1
+                    : options.length - 1;
+
+            options[previousIndex].focus();
+
+        }
+
+        //----------------------------------------------------------
+        // Home
+        //----------------------------------------------------------
+
+        else if (
+            event.key === "Home"
+        ) {
+
+            event.preventDefault();
+
+            options[0].focus();
+
+        }
+
+        //----------------------------------------------------------
+        // End
+        //----------------------------------------------------------
+
+        else if (
+            event.key === "End"
+        ) {
+
+            event.preventDefault();
+
+            options[
+                options.length - 1
+            ].focus();
+
+        }
 
     }
 
@@ -1237,25 +1673,46 @@ function renderSection(
     section.className =
         field.class;
 
-    if (field.heading) {
+    //----------------------------------------------------------
+    // Section Heading
+    //----------------------------------------------------------
+
+    if (field.label) {
 
         const heading =
             document.createElement("h4");
 
+        heading.className =
+            "section-heading";
+
         heading.textContent =
-            field.heading;
+            field.label;
 
         section.appendChild(heading);
 
     }
 
-    const paragraph =
-        document.createElement("p");
+    //----------------------------------------------------------
+    // Section Content
+    //----------------------------------------------------------
 
-    paragraph.textContent =
-        value;
+    const lines =
+        String(value)
+            .split(/\r?\n/)
+            .map(line => line.trim())
+            .filter(line => line.length > 0);
 
-    section.appendChild(paragraph);
+    lines.forEach(line => {
+
+        const paragraph =
+            document.createElement("p");
+
+        paragraph.textContent =
+            line;
+
+        section.appendChild(paragraph);
+
+    });
 
     return section;
 

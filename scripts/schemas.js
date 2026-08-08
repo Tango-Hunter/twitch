@@ -699,6 +699,8 @@ const SCHEMAS = Object.freeze({
                 {
                     id: "requiredSettings",
 
+                    label: "Configuration Requirements",
+
                     element: "section",
 
                     class: "requirements",
